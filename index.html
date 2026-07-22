@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universidade Siabes — Protótipo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <span class="nav-logo">Universidade Siabes</span>
+      <span class="nav-crumb">via Lumio</span>
+      <span class="nav-badge">Protótipo</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link" data-nav="home"><span>Início</span></a>
+      <a href="#" class="nav-link" data-nav="trilha"><span>Trilha</span></a>
+      <a href="#" class="nav-pill">← Central de Tutoriais</a>
+    </div>
+  </nav>
+
+  <!-- ============ HOME ============ -->
+  <section class="view is-active" id="view-home">
+    <div class="hero">
+      <div class="spiral-field" aria-hidden="true">
+        <svg width="620" height="620" viewBox="0 0 620 620" style="right:-160px;top:-120px;" fill="none">
+          <g stroke="rgba(255,255,255,0.07)" stroke-width="1.4">
+            <circle cx="310" cy="310" r="40"/><circle cx="310" cy="310" r="70"/><circle cx="310" cy="310" r="100"/>
+            <circle cx="310" cy="310" r="130"/><circle cx="310" cy="310" r="160"/><circle cx="310" cy="310" r="190"/>
+            <circle cx="310" cy="310" r="220"/><circle cx="310" cy="310" r="250"/><circle cx="310" cy="310" r="280"/>
+          </g>
+        </svg>
+        <svg width="420" height="420" viewBox="0 0 420 420" style="left:-140px;bottom:-140px;" fill="none">
+          <g stroke="rgba(232,169,23,0.10)" stroke-width="1.4">
+            <circle cx="210" cy="210" r="30"/><circle cx="210" cy="210" r="55"/><circle cx="210" cy="210" r="80"/>
+            <circle cx="210" cy="210" r="105"/><circle cx="210" cy="210" r="130"/><circle cx="210" cy="210" r="155"/>
+            <circle cx="210" cy="210" r="180"/><circle cx="210" cy="210" r="205"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-inner">
+        <div class="eyebrow">Formação continuada · Rede SUAS</div>
+        <h1>Capacitação de quem faz a <em>proteção social</em> acontecer no território.</h1>
+        <p class="lede">Aulas, materiais e trilhas práticas para técnicos, orientadores sociais e gestores da assistência social — no seu ritmo, direto do CRAS até a sua tela.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-primary" data-nav="trilha">
+            Começar a trilha
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="btn btn-ghost" data-nav="trilha">Ver conteúdo programático</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>2</b><span>Aulas publicadas</span></div>
+          <div class="stat"><b>14</b><span>Tópicos guiados</span></div>
+          <div class="stat"><b>~4h</b><span>De conteúdo</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-section">
+      <div class="spiral-field" aria-hidden="true">
+        <svg width="340" height="340" viewBox="0 0 340 340" style="right:-100px;top:-60px;" fill="none">
+          <g stroke="rgba(88,107,46,0.14)" stroke-width="1.4">
+            <circle cx="170" cy="170" r="24"/><circle cx="170" cy="170" r="46"/><circle cx="170" cy="170" r="68"/>
+            <circle cx="170" cy="170" r="90"/><circle cx="170" cy="170" r="112"/><circle cx="170" cy="170" r="134"/>
+          </g>
+        </svg>
+      </div>
+      <div class="quote-inner">
+        <span class="quote-mark">“</span>
+        <p>A capacitação continuada aproxima o aporte teórico da assistência social da prática revelada no dia a dia dos territórios — e é isso que sustenta um SUAS mais forte.</p>
+        <cite>Princípio da educação permanente no SUAS</cite>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="section-eyebrow">Conteúdo programático</div>
+        <h2>Comece pela trilha do SUAS</h2>
+        <p>Duas aulas já publicadas, organizadas por tópico — cada uma com vídeo, tempo marcado por assunto e material de apoio para consulta rápida.</p>
+      </div>
+      <div class="cards-row">
+        <div class="course-card" data-accent="gold">
+          <span class="course-tag">Aula 1</span>
+          <h3>O SCFV e os sistemas de gestão</h3>
+          <p>O Serviço de Convivência e Fortalecimento de Vínculos, seus objetivos, público prioritário e os sistemas SISC e Gessuas.</p>
+          <div class="course-meta"><span>≈ 2h</span><span>6 tópicos</span></div>
+          <button class="btn-mini" data-nav="aula" data-aula="1">Assistir agora
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="course-card" data-accent="olive">
+          <span class="course-tag">Aula 2</span>
+          <h3>Atendimento no Domicílio, RMA e CRAS</h3>
+          <p>O PDU, o Registro Mensal de Atendimento e como um sistema de gestão do CRAS organiza prontuários e famílias.</p>
+          <div class="course-meta"><span>≈ 2h</span><span>8 tópicos</span></div>
+          <button class="btn-mini" data-nav="aula" data-aula="2">Assistir agora
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRILHA ============ -->
+  <section class="view" id="view-trilha">
+    <div class="trilha-wrap">
+      <div class="spiral-field" aria-hidden="true">
+        <svg width="380" height="380" viewBox="0 0 380 380" style="right:-160px;top:40px;" fill="none">
+          <g stroke="rgba(14,37,64,0.06)" stroke-width="1.4">
+            <circle cx="190" cy="190" r="26"/><circle cx="190" cy="190" r="50"/><circle cx="190" cy="190" r="74"/>
+            <circle cx="190" cy="190" r="98"/><circle cx="190" cy="190" r="122"/><circle cx="190" cy="190" r="146"/>
+          </g>
+        </svg>
+      </div>
+      <div class="trilha-head">
+        <h2>Sua trilha de aprendizagem</h2>
+        <p>Um caminho, uma aula de cada vez. Novos módulos vão sendo adicionados ao final da trilha.</p>
+      </div>
+
+      <div class="trail">
+        <svg class="trail-svg" viewBox="0 0 52 460" preserveAspectRatio="none">
+          <path d="M26 26 C 10 130, 42 210, 26 290 C 14 350, 38 390, 26 434" stroke="#E4DCC9" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+        </svg>
+
+        <div class="trail-node" data-accent="gold">
+          <div class="trail-marker"><div class="trail-dot"></div></div>
+          <div class="trail-card">
+            <div class="trail-eyebrow">Aula 1</div>
+            <h3>O SCFV e os sistemas de gestão</h3>
+            <p>Conceito do serviço, eixos norteadores, público prioritário, ciclos de vida e os sistemas SISC e Gessuas.</p>
+            <div class="trail-progress"><div style="width:35%"></div></div>
+            <div class="trail-footer">
+              <span class="trail-meta">6 tópicos · 35% concluído</span>
+              <button class="btn-mini" style="color:var(--gold);font-weight:700;font-size:14px;" data-nav="aula" data-aula="1">Continuar →</button>
+            </div>
+            <button class="topics-toggle" data-toggle-topics="1">
+              Ver os tópicos desta aula
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="topics-inline" id="topics-inline-1"></div>
+          </div>
+        </div>
+
+        <div class="trail-node" data-accent="olive">
+          <div class="trail-marker"><div class="trail-dot"></div></div>
+          <div class="trail-card">
+            <div class="trail-eyebrow">Aula 2</div>
+            <h3>Atendimento no Domicílio, RMA e CRAS</h3>
+            <p>O PDU, o RMA, prontuário eletrônico, composição familiar e a gestão do SCFV dentro do sistema.</p>
+            <div class="trail-progress"><div style="width:0%"></div></div>
+            <div class="trail-footer">
+              <span class="trail-meta">8 tópicos · não iniciado</span>
+              <button class="btn-mini" style="color:var(--olive);font-weight:700;font-size:14px;" data-nav="aula" data-aula="2">Iniciar →</button>
+            </div>
+            <button class="topics-toggle" data-toggle-topics="2">
+              Ver os tópicos desta aula
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="topics-inline" id="topics-inline-2"></div>
+          </div>
+        </div>
+
+        <div class="trail-node">
+          <div class="trail-marker"><div class="trail-dot is-ghost"></div></div>
+          <div class="trail-card is-ghost">
+            <div class="trail-eyebrow">Em breve</div>
+            <h3>Aula 3 — a definir</h3>
+            <p>Novos conteúdos entram aqui conforme forem publicados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AULA ============ -->
+  <section class="view" id="view-aula">
+    <div class="aula-wrap">
+      <div class="aula-breadcrumb">
+        <a href="#" data-nav="trilha">Trilha</a> <span>/</span> <span id="aula-crumb">Aula 1</span>
+      </div>
+      <div class="aula-title-row">
+        <div>
+          <h2 id="aula-titulo">O SCFV e os sistemas de gestão</h2>
+          <div class="course-meta" id="aula-meta"><span>≈ 2h</span><span>6 tópicos</span></div>
+        </div>
+      </div>
+
+      <div class="aula-grid">
+        <div>
+          <div class="player" id="player">
+            <div id="yt-player"></div>
+          </div>
+
+          <div class="tabs">
+            <div class="tab is-active" data-tab="sobre">Sobre a aula</div>
+            <div class="tab" data-tab="material">Material de apoio</div>
+            <div class="tab" data-tab="resumo">Resumo</div>
+          </div>
+
+          <div class="tabpanel is-active" data-panel="sobre">
+            <p id="aula-descricao">Nesta aula você vai entender o funcionamento do Serviço de Convivência e Fortalecimento de Vínculos (SCFV) e os principais sistemas usados para geri-lo nos municípios.</p>
+          </div>
+
+          <div class="tabpanel" data-panel="material">
+            <div class="material-card">
+              <div class="material-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="1.6"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.6"/></svg>
+              </div>
+              <div class="material-info">
+                <b id="material-nome">Material_Didatico_Aula1.docx</b>
+                <span>DOCX · guia completo por tópico</span>
+              </div>
+              <div class="material-dl" id="btn-download">
+                Baixar
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabpanel" data-panel="resumo">
+            <ul id="aula-resumo"></ul>
+          </div>
+        </div>
+
+        <div class="side-panel">
+          <h4>Tópicos da aula</h4>
+          <div id="topic-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="spiral-field" aria-hidden="true">
+      <svg width="300" height="300" viewBox="0 0 300 300" style="left:-100px;bottom:-140px;" fill="none">
+        <g stroke="rgba(232,169,23,0.14)" stroke-width="1.4">
+          <circle cx="150" cy="150" r="20"/><circle cx="150" cy="150" r="40"/><circle cx="150" cy="150" r="60"/>
+          <circle cx="150" cy="150" r="80"/><circle cx="150" cy="150" r="100"/><circle cx="150" cy="150" r="120"/>
+        </g>
+      </svg>
+    </div>
+    <div class="footer-inner">
+      <b>Universidade Siabes</b> — protótipo navegável, acessado a partir da Central de Tutoriais (Lumio) · conteúdo de exemplo para validação de layout
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"><span class="dot"></span><span id="toast-text">Isso baixaria o arquivo real na versão final.</span></div>
+
+  <script src="script.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+</body>
+</html>
