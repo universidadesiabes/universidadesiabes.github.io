@@ -49,32 +49,6 @@ const DATA = {
   }
 };
 
-// ---------- Player do YouTube (permite pular para o minuto exato) ----------
-let player;
-let pendingVideoId = null;
-
-// Chamada automaticamente pela API do YouTube quando ela termina de carregar
-function onYouTubeIframeAPIReady(){
-  player = new YT.Player('yt-player', {
-    height: '100%',
-    width: '100%',
-    videoId: DATA[1].videoId,
-    playerVars: {
-      rel: 0,
-      modestbranding: 1,
-      origin: window.location.origin
-    },
-    events: {
-      onReady: () => {
-        if (pendingVideoId) {
-          player.loadVideoById(pendingVideoId);
-          pendingVideoId = null;
-        }
-      }
-    }
-  });
-}
-
 function timeToSeconds(t){
   const parts = t.split(':').map(Number);
   if (parts.length === 3) return parts[0]*3600 + parts[1]*60 + parts[2];
