@@ -58,18 +58,15 @@ universidade-suas/
 │
 ├── assets/
 │   ├── css/
-│   ├── js/
-│   └── icons/
+│   └── js/
 │
 ├── config/
+│   └── cursos.js        # fonte única de dados dos cursos (vídeo, pdf, tópicos, resumo)
 │
-├── pdf/
-│
-├── docs/
+├── pdf/                  # materiais em PDF baixáveis (ver pdf/README.md)
 │
 ├── index.html
 ├── README.md
-├── LICENSE
 └── .gitignore
 ```
 
@@ -114,7 +111,6 @@ O projeto segue uma estrutura modular.
 - **assets/** → arquivos estáticos.
 - **config/** → configurações e links externos.
 - **pdf/** → materiais didáticos.
-- **docs/** → documentação técnica.
 
 ---
 
@@ -123,9 +119,11 @@ O projeto segue uma estrutura modular.
 - [x] Estrutura inicial
 - [x] Organização das pastas
 - [x] Publicação no GitHub
-- [ ] Interface principal
-- [ ] Catálogo de cursos
-- [ ] Página de aulas
+- [x] Interface principal
+- [x] Catálogo de cursos
+- [x] Página de aulas
+- [ ] Vídeos publicados no Google Drive (hoje o campo `driveFileId` em `config/cursos.js` está com placeholder)
+- [ ] PDFs reais em `pdf/` (ver `pdf/README.md`)
 - [ ] Sistema de pesquisa
 - [ ] Melhorias de acessibilidade
 - [ ] Otimização de desempenho
