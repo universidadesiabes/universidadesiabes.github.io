@@ -19,8 +19,9 @@
     </div>
     <div class="nav-links">
       <a href="#" class="nav-link" data-nav="home"><span>Início</span></a>
+      <a href="#" class="nav-link" data-nav="intro"><span>Introdução</span></a>
       <a href="#" class="nav-link" data-nav="trilha"><span>Trilha</span></a>
-      <a href="#" class="nav-pill">← Central de Tutoriais</a>
+      <a href="#" class="nav-pill" data-nav="progresso" id="nav-progresso">Progresso</a>
     </div>
   </nav>
 
@@ -55,8 +56,8 @@
           <button class="btn btn-ghost" data-nav="trilha">Ver conteúdo programático</button>
         </div>
         <div class="hero-stats">
-          <div class="stat"><b>2</b><span>Aulas publicadas</span></div>
-          <div class="stat"><b>14</b><span>Tópicos guiados</span></div>
+          <div class="stat"><b>2</b><span>Módulos publicados</span></div>
+          <div class="stat"><b>14</b><span>Aulas guiadas</span></div>
           <div class="stat"><b>~4h</b><span>De conteúdo</span></div>
         </div>
       </div>
@@ -82,26 +83,256 @@
       <div class="section-head">
         <div class="section-eyebrow">Conteúdo programático</div>
         <h2>Comece pela trilha do SUAS</h2>
-        <p>Duas aulas já publicadas, organizadas por tópico — cada uma com vídeo, tempo marcado por assunto e material de apoio para consulta rápida.</p>
+        <p>Dois módulos já publicados, com 14 aulas curtas organizadas por assunto — cada uma com vídeo próprio e material de apoio para consulta rápida.</p>
       </div>
-      <div class="cards-row">
-        <div class="course-card" data-accent="gold">
-          <span class="course-tag">Aula 1</span>
-          <h3>O SCFV e os sistemas de gestão</h3>
-          <p>O Serviço de Convivência e Fortalecimento de Vínculos, seus objetivos, público prioritário e os sistemas SISC e Gessuas.</p>
-          <div class="course-meta"><span>≈ 2h</span><span>6 tópicos</span></div>
-          <button class="btn-mini" data-nav="aula" data-aula="1">Assistir agora
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+      <div class="cards-row" id="cards-row"></div>
+    </div>
+  </section>
+
+  <!-- ============ INTRODUÇÃO ============ -->
+  <section class="view" id="view-intro">
+    <div class="intro-wrap">
+      <a href="#" class="back-btn" data-nav="home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Voltar ao início
+      </a>
+
+      <div class="intro-cover">
+        <div class="section-eyebrow">Série de estudo · Volume 1</div>
+        <h1>SUAS: o mapa do território</h1>
+        <p class="lede">De onde vem a assistência social brasileira, como um CRAS funciona por dentro — e o quanto desse mundo o SIABES já colocou de pé. Este é o material-base: dele partem os módulos que aprofundam cada pedaço.</p>
+      </div>
+
+      <!-- 01 · O que esperar do curso -->
+      <div class="intro-block">
+        <div class="section-head">
+          <div class="section-eyebrow">01 · O que esperar do curso</div>
+          <h2>Antes de começar</h2>
+          <p>Este curso foi pensado para levar você do zero até o dia a dia real de um CRAS — sem precisar decorar teoria solta. Antes de entrar nas aulas, vale entender o que vem pela frente.</p>
         </div>
-        <div class="course-card" data-accent="olive">
-          <span class="course-tag">Aula 2</span>
-          <h3>Atendimento no Domicílio, RMA e CRAS</h3>
-          <p>O PDU, o Registro Mensal de Atendimento e como um sistema de gestão do CRAS organiza prontuários e famílias.</p>
-          <div class="course-meta"><span>≈ 2h</span><span>8 tópicos</span></div>
-          <button class="btn-mini" data-nav="aula" data-aula="2">Assistir agora
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+        <div class="cards-row cols-3">
+          <div class="course-card" data-accent="gold">
+            <span class="course-tag">Objetivo</span>
+            <h3>O que você vai aprender</h3>
+            <p>Entender o Serviço de Convivência e Fortalecimento de Vínculos (SCFV), o Atendimento no Domicílio, o RMA e os sistemas de gestão (SISC, Gessuas) usados no dia a dia do CRAS.</p>
+          </div>
+          <div class="course-card" data-accent="olive">
+            <span class="course-tag">Formato</span>
+            <h3>Como o curso funciona</h3>
+            <p>2 módulos, 14 aulas curtas organizadas por assunto — cada uma com vídeo, resumo e material de apoio em PDF. Sem aula de 2 horas: você assiste um tópico de cada vez.</p>
+          </div>
+          <div class="course-card" data-accent="gold">
+            <span class="course-tag">Pra quem é</span>
+            <h3>Público do curso</h3>
+            <p>Técnicos, orientadores sociais e gestores da assistência social que já atuam ou vão atuar no território.</p>
+          </div>
+        </div>
+        <div class="intro-analogy">
+          <div class="label">Dica</div>
+          <p>Use a <strong>Trilha</strong> para navegar pelas aulas na ordem sugerida, e marque cada aula como concluída — a aba <strong>Progresso</strong> mostra quanto falta.</p>
+        </div>
+      </div>
+
+      <!-- 02 · A origem -->
+      <div class="intro-block">
+        <div class="section-head">
+          <div class="section-eyebrow">02 · A origem</div>
+          <h2>Assistência social é direito, não favor</h2>
+          <p>Até 1988, assistência social no Brasil era sinônimo de caridade: primeiras-damas, filantropia, favores. A Constituição mudou a natureza da coisa — assistência virou direito de quem precisa e dever do Estado, independente de contribuição. O SUAS é a engenharia que tornou esse direito operável em 5.570 municípios.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-era">
+            <div class="year">1988</div>
+            <h3>Constituição Federal</h3>
+            <p>Assistência social entra no tripé da Seguridade Social, ao lado da saúde e da previdência.</p>
+          </div>
+          <div class="timeline-era">
+            <div class="year">1993</div>
+            <h3>LOAS</h3>
+            <p>A Lei Orgânica da Assistência Social regulamenta o direito e cria o desenho de gestão.</p>
+          </div>
+          <div class="timeline-era">
+            <div class="year">2004</div>
+            <h3>PNAS</h3>
+            <p>A Política Nacional define os conceitos-chave: território, matricialidade, proteções.</p>
+          </div>
+          <div class="timeline-era">
+            <div class="year">2005</div>
+            <h3>SUAS</h3>
+            <p>Nasce o sistema único, inspirado no SUS. Em 2011 vira lei (Lei 12.435).</p>
+          </div>
+          <div class="timeline-era">
+            <div class="year">2009</div>
+            <h3>Tipificação</h3>
+            <p>Resolução CNAS 109: o "cardápio" nacional de serviços — incluindo o PAIF.</p>
+          </div>
+        </div>
+        <div class="intro-analogy">
+          <div class="label">Analogia</div>
+          <p>O SUAS está para a assistência social como o SUS está para a saúde: um sistema único nacional, com regras federais, gestão municipal e portas de entrada no bairro. Se você entende que o posto de saúde segue protocolos do Ministério da Saúde, já entendeu por que o CRAS segue normas do MDS — e por que o sistema precisa falar essa língua.</p>
+        </div>
+      </div>
+
+      <!-- 03 · A estrutura -->
+      <div class="intro-block">
+        <div class="section-head">
+          <div class="section-eyebrow">03 · A estrutura</div>
+          <h2>Dois níveis de proteção, cada um com sua "casa"</h2>
+          <p>O SUAS organiza tudo por gravidade da situação. A pergunta que define onde a família será atendida é: o direito já foi violado, ou estamos prevenindo?</p>
+        </div>
+        <div class="cards-row">
+          <div class="course-card" data-accent="gold">
+            <span class="course-tag">Proteção Social Básica — PSB</span>
+            <h3>CRAS · prevenir</h3>
+            <p>A casa da prevenção, no território onde as famílias vivem. Três serviços tipificados: PAIF (acompanhamento familiar), SCFV (grupos de convivência) e PSB no Domicílio (idosos e PCD). É aqui que o SIABES vive hoje.</p>
+          </div>
+          <div class="course-card" data-accent="olive">
+            <span class="course-tag">Proteção Social Especial — PSE</span>
+            <h3>CREAS · reparar</h3>
+            <p>Quando o direito já foi violado: violência doméstica, trabalho infantil, abandono. Média complexidade (CREAS/PAEFI) e alta complexidade (acolhimento institucional, quando a família deixa de ser segura).</p>
+          </div>
+        </div>
+        <div class="intro-analogy">
+          <div class="label">Analogia</div>
+          <p>Pense em manutenção preventiva vs. corretiva. O CRAS é a revisão periódica do carro: barata, no bairro, evita o problema grave. O CREAS é a oficina de retífica: caro, especializado, entra quando o motor já fundiu. Todo o desenho do SUAS existe para que o máximo de famílias resolva sua situação na "revisão" — e o SIABES é o sistema da revisão.</p>
+        </div>
+        <p class="intro-closing">Dois princípios amarram tudo: <strong>territorialização</strong> (cada CRAS é responsável por um pedaço da cidade — as famílias daquele território são referenciadas a ele) e <strong>matricialidade sociofamiliar</strong> (a unidade de trabalho é a família, nunca o indivíduo isolado).</p>
+      </div>
+
+      <!-- 04 · Os personagens -->
+      <div class="intro-block">
+        <div class="section-head">
+          <div class="section-eyebrow">04 · Os personagens</div>
+          <h2>Quem é quem dentro de um CRAS</h2>
+          <p>Quando você desenha uma tela, é pra uma dessas pessoas. Cada uma vê o sistema de um jeito diferente — e o permissionamento existe por causa disso.</p>
+        </div>
+        <div class="cards-row cols-3">
+          <div class="course-card" data-accent="gold">
+            <span class="course-tag">Usuária</span>
+            <h3>A família</h3>
+            <p>Quem tem o direito. Chega por demanda espontânea, busca ativa ou encaminhamento (escola, saúde, Conselho Tutelar). No sistema: Pessoa + Família + composição.</p>
+          </div>
+          <div class="course-card" data-accent="olive">
+            <span class="course-tag">Recepção</span>
+            <h3>Acolhida</h3>
+            <p>O primeiro contato. Cadastra, agenda, orienta. Vê dados cadastrais — nunca o conteúdo sigiloso do prontuário técnico.</p>
+          </div>
+          <div class="course-card" data-accent="gold">
+            <span class="course-tag">Equipe técnica</span>
+            <h3>Técnico de referência</h3>
+            <p>Assistente social ou psicólogo. Faz escuta qualificada, atendimentos, visitas, conduz grupos, decide inclusão no PAIF. Dono do prontuário.</p>
+          </div>
+          <div class="course-card" data-accent="olive">
+            <span class="course-tag">Coordenação</span>
+            <h3>Gestão da unidade</h3>
+            <p>Coordena o CRAS: distribui casos, supervisiona o trabalho, responde pelos números da unidade. Acesso amplo dentro da unidade.</p>
+          </div>
+          <div class="course-card" data-accent="gold">
+            <span class="course-tag">Gestão municipal</span>
+            <h3>Secretaria (SEMADS)</h3>
+            <p>Gere a rede toda: unidades, equipes, vagas, metas. É o cliente contratante — e quem presta contas ao governo federal.</p>
+          </div>
+          <div class="course-card" data-accent="olive">
+            <span class="course-tag">Governo federal</span>
+            <h3>MDS</h3>
+            <p>Define as normas, cofinancia e cobra os números: RMA mensal, Censo SUAS, SISC. Não usa o SIABES — mas recebe dados que nascem nele.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 · A jornada -->
+      <div class="intro-block">
+        <div class="section-head">
+          <div class="section-eyebrow">05 · A jornada — onde tudo se encaixa</div>
+          <h2>Dona Maria chega ao CRAS</h2>
+          <p>A melhor forma de sentir a regra de negócio é seguir uma família fictícia de ponta a ponta. Cada parada da jornada mostra qual parte do SIABES já resolve aquele momento.</p>
+        </div>
+        <div class="journey trail">
+          <svg class="trail-svg" viewBox="0 0 52 460" preserveAspectRatio="none">
+            <path d="M26 26 C 10 130, 42 210, 26 290 C 14 350, 38 390, 26 434" stroke="#E4DCC9" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+          </svg>
+          <div class="trail-node">
+            <div class="trail-marker"><div class="trail-dot has-number">1</div></div>
+            <div class="trail-card">
+              <h3>Acolhida na recepção</h3>
+              <p>Dona Maria perdeu o emprego e ouviu na escola do filho que "o CRAS ajuda". A recepção a acolhe e verifica: ela já tem cadastro? Busca por nome ou CPF.</p>
+              <span class="chip">social.people</span><span class="chip">busca de pessoas</span>
+            </div>
+          </div>
+          <div class="trail-node">
+            <div class="trail-marker"><div class="trail-dot has-number">2</div></div>
+            <div class="trail-card">
+              <h3>Cadastro da família</h3>
+              <p>É a primeira vez dela. Cadastra-se a pessoa, cria-se a família com Dona Maria como responsável familiar, adicionam-se os dois filhos com grau de parentesco, e o endereço — que referencia a família ao CRAS do território.</p>
+              <span class="chip">social.families</span><span class="chip">person_has_families</span><span class="chip">fluxo em etapas no front</span>
+            </div>
+          </div>
+          <div class="trail-node">
+            <div class="trail-marker"><div class="trail-dot has-number">3</div></div>
+            <div class="trail-card">
+              <h3>Escuta qualificada</h3>
+              <p>Uma técnica faz o primeiro atendimento: escuta a história, percebe insegurança alimentar e um filho fora da escola. Registra o atendimento com estado e linha do tempo.</p>
+              <span class="chip">attendance.attendances</span><span class="chip">timeline recursiva</span>
+            </div>
+          </div>
+          <div class="trail-node">
+            <div class="trail-marker"><div class="trail-dot has-number">4</div></div>
+            <div class="trail-card">
+              <h3>Benefício eventual</h3>
+              <p>Necessidade imediata primeiro: a técnica providencia uma cesta básica. A entrega fica registrada — quem recebeu, quando, entregue por quem.</p>
+              <span class="chip">benefit_delivered</span><span class="chip">módulo benefit</span>
+            </div>
+          </div>
+          <div class="trail-node">
+            <div class="trail-marker"><div class="trail-dot has-number">5</div></div>
+            <div class="trail-card">
+              <h3>Inclusão no PAIF</h3>
+              <p>A situação não se resolve com uma cesta: há vulnerabilidades que pedem acompanhamento continuado. A técnica decide incluir a família no PAIF, registra um diagnóstico de inclusão e assume como técnica de referência.</p>
+              <span class="chip">paif_participations</span><span class="chip">inclusion_diagnostics</span><span class="chip">aba PAIF do prontuário</span>
+            </div>
+          </div>
+          <div class="trail-node">
+            <div class="trail-marker"><div class="trail-dot has-number">6</div></div>
+            <div class="trail-card">
+              <h3>Acompanhamento em movimento</h3>
+              <p>Nos meses seguintes: atendimentos particularizados vinculados à participação, uma visita domiciliar para conhecer a realidade da casa, o filho adolescente entra num grupo do SCFV com controle de frequência. Cada contato vira registro de evolução.</p>
+              <span class="chip">evolution_records</span><span class="chip">visit.visits</span><span class="chip">collective_attendance</span>
+            </div>
+          </div>
+          <div class="trail-node">
+            <div class="trail-marker"><div class="trail-dot has-number">7</div></div>
+            <div class="trail-card">
+              <h3>Desligamento</h3>
+              <p>Um ano depois: Dona Maria empregada, filho de volta à escola. A técnica registra o desligamento — motivo, evolução final, vulnerabilidades remanescentes. A família continua cadastrada e referenciada; o episódio se encerra, o histórico permanece.</p>
+              <span class="chip">paif_closures</span><span class="chip">históricos de participações</span>
+            </div>
+          </div>
+        </div>
+        <div class="intro-analogy">
+          <div class="label">Repare</div>
+          <p>Quase toda parada da jornada já tem módulo construído no SIABES. O sistema não é um cadastro com telas soltas — ele já desenha o fluxo real de trabalho de um CRAS, do primeiro "bom dia" ao desligamento.</p>
+        </div>
+      </div>
+
+      <!-- 06 · O glossário -->
+      <div class="intro-block">
+        <div class="section-head">
+          <div class="section-eyebrow">06 · O glossário de bolso</div>
+          <h2>As siglas que vão aparecer nas reuniões</h2>
+        </div>
+        <div class="siglas-grid">
+          <div class="sigla-card"><span class="sigla-abbr">SUAS</span><span class="sigla-full">Sistema Único de Assistência Social</span><p>O "SUS da assistência": rede nacional, gestão municipal.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">CRAS</span><span class="sigla-full">Centro de Referência de Assistência Social</span><p>Porta de entrada no bairro. Prevenção. Onde o SIABES opera.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">CREAS</span><span class="sigla-full">Centro de Referência Especializado</span><p>Atende direito já violado (violência, abandono). Serviço: PAEFI.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">PSB / PSE</span><span class="sigla-full">Proteção Social Básica / Especial</span><p>Prevenir vs. reparar. O SIABES hoje é um sistema de PSB.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">PAIF</span><span class="sigla-full">Proteção e Atendimento Integral à Família</span><p>Acompanhamento continuado de famílias.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">SCFV</span><span class="sigla-full">Serviço de Convivência e Fortalecimento de Vínculos</span><p>Os grupos e oficinas por ciclo de vida.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">MDS</span><span class="sigla-full">Ministério do Desenvolvimento e Assistência Social</span><p>Normatiza, cofinancia e cobra números do município.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">RMA</span><span class="sigla-full">Registro Mensal de Atendimentos</span><p>O relatório mensal CRAS → MDS. Nossos dados alimentam ele.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">CadÚnico</span><span class="sigla-full">Cadastro Único para Programas Sociais</span><p>Base federal de famílias de baixa renda (Bolsa Família, BPC). Sistema do governo — vizinho do nosso, não concorrente.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">LOAS</span><span class="sigla-full">Lei Orgânica da Assistência Social (1993)</span><p>A lei-mãe que regulamenta o direito constitucional.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">NOB / NOB-RH</span><span class="sigla-full">Normas Operacionais Básicas</span><p>Regras de gestão e de equipes mínimas obrigatórias por unidade.</p></div>
+          <div class="sigla-card"><span class="sigla-abbr">SEMADS</span><span class="sigla-full">Secretaria Municipal de Assistência Social</span><p>A gestão municipal — o cliente contratante.</p></div>
         </div>
       </div>
     </div>
@@ -118,6 +349,11 @@
           </g>
         </svg>
       </div>
+      <a href="#" class="back-btn" data-nav="home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Voltar ao início
+      </a>
+
       <div class="trilha-head">
         <h2>Sua trilha de aprendizagem</h2>
         <p>Um caminho, uma aula de cada vez. Novos módulos vão sendo adicionados ao final da trilha.</p>
@@ -128,49 +364,13 @@
           <path d="M26 26 C 10 130, 42 210, 26 290 C 14 350, 38 390, 26 434" stroke="#E4DCC9" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
         </svg>
 
-        <div class="trail-node" data-accent="gold">
-          <div class="trail-marker"><div class="trail-dot"></div></div>
-          <div class="trail-card">
-            <div class="trail-eyebrow">Aula 1</div>
-            <h3>O SCFV e os sistemas de gestão</h3>
-            <p>Conceito do serviço, eixos norteadores, público prioritário, ciclos de vida e os sistemas SISC e Gessuas.</p>
-            <div class="trail-progress"><div style="width:35%"></div></div>
-            <div class="trail-footer">
-              <span class="trail-meta">6 tópicos · 35% concluído</span>
-              <button class="btn-mini" style="color:var(--gold);font-weight:700;font-size:14px;" data-nav="aula" data-aula="1">Continuar →</button>
-            </div>
-            <button class="topics-toggle" data-toggle-topics="1">
-              Ver os tópicos desta aula
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="topics-inline" id="topics-inline-1"></div>
-          </div>
-        </div>
-
-        <div class="trail-node" data-accent="olive">
-          <div class="trail-marker"><div class="trail-dot"></div></div>
-          <div class="trail-card">
-            <div class="trail-eyebrow">Aula 2</div>
-            <h3>Atendimento no Domicílio, RMA e CRAS</h3>
-            <p>O PDU, o RMA, prontuário eletrônico, composição familiar e a gestão do SCFV dentro do sistema.</p>
-            <div class="trail-progress"><div style="width:0%"></div></div>
-            <div class="trail-footer">
-              <span class="trail-meta">8 tópicos · não iniciado</span>
-              <button class="btn-mini" style="color:var(--olive);font-weight:700;font-size:14px;" data-nav="aula" data-aula="2">Iniciar →</button>
-            </div>
-            <button class="topics-toggle" data-toggle-topics="2">
-              Ver os tópicos desta aula
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <div class="topics-inline" id="topics-inline-2"></div>
-          </div>
-        </div>
+        <div id="trail-modules"></div>
 
         <div class="trail-node">
           <div class="trail-marker"><div class="trail-dot is-ghost"></div></div>
           <div class="trail-card is-ghost">
             <div class="trail-eyebrow">Em breve</div>
-            <h3>Aula 3 — a definir</h3>
+            <h3>Módulo 3 — a definir</h3>
             <p>Novos conteúdos entram aqui conforme forem publicados.</p>
           </div>
         </div>
@@ -182,13 +382,21 @@
   <section class="view" id="view-aula">
     <div class="aula-wrap">
       <div class="aula-breadcrumb">
-        <a href="#" data-nav="trilha">Trilha</a> <span>/</span> <span id="aula-crumb">Aula 1</span>
+        <a href="#" class="back-btn" data-nav="trilha">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Voltar à trilha
+        </a>
+        <span class="aula-breadcrumb-label" id="aula-crumb">Módulo 1 · Aula 1</span>
       </div>
       <div class="aula-title-row">
         <div>
           <h2 id="aula-titulo">O SCFV e os sistemas de gestão</h2>
           <div class="course-meta" id="aula-meta"><span>≈ 2h</span><span>6 tópicos</span></div>
         </div>
+        <button class="complete-btn" id="btn-concluida" data-toggle-complete>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span id="btn-concluida-label">Marcar como concluída</span>
+        </button>
       </div>
 
       <div class="aula-grid">
@@ -197,42 +405,74 @@
             <iframe id="drive-player" src="" allow="autoplay" allowfullscreen></iframe>
           </div>
 
-          <div class="tabs">
-            <div class="tab is-active" data-tab="sobre">Sobre a aula</div>
-            <div class="tab" data-tab="material">Material de apoio</div>
-            <div class="tab" data-tab="resumo">Resumo</div>
+          <div class="tabs-row">
+            <div class="tabs">
+              <div class="tab is-active" data-tab="sobre">Sobre a aula</div>
+              <div class="tab" data-tab="resumo">Resumo</div>
+              <div class="tab" data-tab="atividade">Atividade</div>
+            </div>
+            <button class="next-aula-btn" id="btn-proxima-aula" data-nav="aula" data-aula="">
+              Próxima aula
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
 
           <div class="tabpanel is-active" data-panel="sobre">
             <p id="aula-descricao">Nesta aula você vai entender o funcionamento do Serviço de Convivência e Fortalecimento de Vínculos (SCFV) e os principais sistemas usados para geri-lo nos municípios.</p>
           </div>
 
-          <div class="tabpanel" data-panel="material">
-            <div class="material-card">
-              <div class="material-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="1.6"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.6"/></svg>
-              </div>
-              <div class="material-info">
-                <b id="material-nome">Material_Didatico_Aula1.pdf</b>
-                <span>PDF · guia completo por tópico</span>
-              </div>
-              <a class="material-dl" id="btn-download" href="" download>
-                Baixar
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-
           <div class="tabpanel" data-panel="resumo">
             <ul id="aula-resumo"></ul>
+            <a class="resumo-pdf-link" id="btn-download" href="" download target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Baixar este resumo em PDF
+            </a>
+          </div>
+
+          <div class="tabpanel" data-panel="atividade">
+            <p class="quiz-intro">Teste o que você aprendeu nesta aula.</p>
+            <div id="quiz-container"></div>
+            <div class="quiz-actions">
+              <button class="quiz-corrigir-btn" id="btn-corrigir-quiz" data-quiz-corrigir>Corrigir</button>
+              <button class="quiz-refazer-btn" id="btn-refazer-quiz" data-quiz-refazer hidden>Tentar de novo</button>
+            </div>
+            <div class="quiz-resultado" id="quiz-resultado" hidden></div>
           </div>
         </div>
 
         <div class="side-panel">
-          <h4>Tópicos da aula</h4>
+          <h4 id="side-panel-title">Aulas deste módulo</h4>
           <div id="topic-list"></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRESSO ============ -->
+  <section class="view" id="view-progresso">
+    <div class="progresso-wrap">
+      <a href="#" class="back-btn" data-nav="home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Voltar ao início
+      </a>
+
+      <div class="trilha-head">
+        <h2>Seu progresso</h2>
+        <p>Acompanhe quantas aulas você já concluiu em cada módulo. Fica salvo neste navegador.</p>
+      </div>
+
+      <div class="progresso-overall">
+        <div class="progresso-overall-number">
+          <b id="progresso-total-pct">0%</b>
+          <span id="progresso-total-label">0 de 14 aulas concluídas</span>
+        </div>
+        <div class="trail-progress progresso-overall-bar"><div id="progresso-total-bar" style="width:0%"></div></div>
+        <p class="progresso-quiz-info" id="progresso-quiz-info">0 de 14 aulas com atividade feita</p>
+      </div>
+
+      <div id="progresso-modulos" class="progresso-modulos"></div>
+
+      <button class="progresso-reset" id="btn-reset-progresso" data-reset-progresso>Zerar progresso</button>
     </div>
   </section>
 
