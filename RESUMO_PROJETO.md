@@ -7,8 +7,9 @@
 - **Nome real do produto:** Universidade SIABES (não "Universidade SUAS" — esse foi um nome usado por engano no início, corrigido depois).
 - **O que é:** plataforma web de capacitação para técnicos, orientadores sociais e gestores da assistência social, ensinando o SUAS (Sistema Único de Assistência Social) na prática e o uso do **SIABES**, o sistema de gestão socioassistencial (prontuário eletrônico, SCFV, RMA, CadÚnico etc.) usado pelos CRAS.
 - **Acesso:** embutida na Central de Tutoriais do **Lumio**.
+- **URL ao vivo:** https://universidadesiabes.github.io/
 - **Pasta local:** `Documents\universidade_suas`
-- **Repositório GitHub:** `Vinicius957/universidade-suas` (nome técnico do repo **mantido de propósito** — não foi renomeado para SIABES para não quebrar a URL do GitHub Pages, que provavelmente está referenciada no Lumio).
+- **Repositório GitHub:** `universidadesiabes/universidadesiabes.github.io` (organização própria, criada em 27/07 — antes era `Vinicius957/universidade-suas`, transferido no mesmo dia pra tirar o nome de usuário pessoal da URL. Nome escolhido de propósito: repo `<org>.github.io` publica direto na raiz do domínio.)
 - **Stack:** HTML + CSS + JS puro (sem framework). Dados de todos os módulos/aulas centralizados em `config/cursos.js`. Vídeos hospedados no Google Drive e embutidos via iframe (`driveFileId` por aula).
 - **Conteúdo:** 2 módulos publicados, 14 aulas ao todo.
   - Módulo 1 — O SCFV e os sistemas de gestão (6 aulas)
@@ -49,8 +50,9 @@
 
 6. **Redesenho do painel lateral de aulas** (27/07): aplicado só o componente `.side-panel`/`.topic-item`/`.topic-time` do export — bolinhas circulares (26px) com borda, preenchida dourado quando ativa e verde-oliva quando concluída, linha divisória entre itens, sem mais o highlight de fundo. Decisão: **fonte (Archivo + Source Sans 3) e botões quadrados (8px) do mesmo export NÃO foram aplicados** — o site continua só com Inter e botões pill (100px), pra não contradizer a limpeza de tom feita antes.
 
-7. **Site publicado (27/07):** GitHub Pages habilitado (branch `main`, raiz), no ar em **https://vinicius957.github.io/universidade-suas/**. Testado: título, CSS, JS, `cursos.js` e PDFs carregando com HTTP 200.
+7. **Site publicado (27/07):** GitHub Pages habilitado (branch `main`, raiz). Testado: título, CSS, JS, `cursos.js` e PDFs carregando com HTTP 200.
    - Cogitamos hospedar via Supabase Storage antes — **não funciona**: todo objeto público do Storage vem com `Content-Security-Policy: default-src 'none'; sandbox` fixo, o que bloqueia a execução do `script.js` (página abriria em branco). Ficou descartado; o bucket criado foi apagado.
+   - **URL trocada (27/07, mesmo dia):** o repositório foi transferido de `Vinicius957/universidade-suas` para a organização **`universidadesiabes`** (criada pelo usuário) e renomeado para `universidadesiabes.github.io` (nome especial do GitHub que publica direto na raiz do domínio). URL final e definitiva: **https://universidadesiabes.github.io/** — sem o nome de usuário pessoal, sem path de repositório. GitHub mantém redirecionamento automático da URL antiga por um tempo. O remote local do git (`origin`) já foi atualizado para `https://github.com/universidadesiabes/universidadesiabes.github.io.git`.
 
 8. **Vídeos no Google Drive (27/07):** as 14 aulas foram upadas pelo usuário numa pasta "Universidade SUAS" (subpastas Módulo 1 e Módulo 2, replicando a estrutura do curso), compartilhadas como "Qualquer pessoa com o link". Os 14 `driveFileId` em `config/cursos.js` foram trocados pelos IDs reais e o commit já está publicado — confirmado ao vivo, sem placeholders restantes.
 
