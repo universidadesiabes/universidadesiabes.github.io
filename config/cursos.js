@@ -19,7 +19,7 @@ const modulos = [
         titulo: "O que é o SCFV",
         curta: "Conceito, vínculo ao CRAS e objetivos gerais.",
         desc: "O Serviço de Convivência e Fortalecimento de Vínculos (SCFV) é um serviço da Proteção Social Básica do SUAS, oferecido em grupos, com o objetivo de prevenir riscos e vulnerabilidades sociais. Ele funciona como um complemento ao trabalho social realizado com as famílias.",
-        driveFileId: "SEU_ID_DRIVE_1_1",
+        driveFileId: "1GwHGrtodGCN7kq8YcDK-EiTolrRt3c31",
         pdf: "./pdf/modulo-1/01-o-que-e-o-scfv.pdf",
         baseLegal: [
           { norma: "Resolução CNAS nº 109/2009 (Tipificação Nacional de Serviços Socioassistenciais)", nota: "Tipifica o SCFV como serviço de Proteção Social Básica, definindo objetivos, público e resultados esperados em âmbito nacional." },
@@ -40,7 +40,7 @@ const modulos = [
         titulo: "Público prioritário e ciclos de vida",
         curta: "Faixas etárias e como o serviço é ofertado.",
         desc: "O SCFV organiza suas atividades de acordo com a faixa etária dos usuários e prioriza o atendimento de pessoas em maior situação de vulnerabilidade.",
-        driveFileId: "SEU_ID_DRIVE_1_2",
+        driveFileId: "1IGHEsl9WULZKSrshfMEEIz7yIXtLfzaS",
         pdf: "./pdf/modulo-1/02-publico-prioritario-e-ciclos-de-vida.pdf",
         baseLegal: [
           { norma: "Resolução CNAS nº 1/2013", nota: "Define o público prioritário do SCFV e a organização das atividades por ciclo de vida, com meta mínima de vagas para esse público." },
@@ -64,7 +64,7 @@ const modulos = [
         titulo: "O sistema SISC: prazos e cadastro",
         curta: "Preenchimento, prazos e cofinanciamento.",
         desc: "O SISC (Sistema de Informações do SCFV) é o sistema oficial usado para monitorar o cumprimento das metas do SCFV pelos municípios. O correto preenchimento dele impacta diretamente o repasse de cofinanciamento federal.",
-        driveFileId: "SEU_ID_DRIVE_1_3",
+        driveFileId: "1GaYpyRfEwRXTS5UZttQjLZ9OjlmPyqSB",
         pdf: "./pdf/modulo-1/03-o-sistema-sisc-prazos-e-cadastro.pdf",
         baseLegal: [
           { norma: "Portaria MDS nº 134/2013", nota: "Institui o SISC como instrumento de gestão do SCFV para fins de acompanhamento e cofinanciamento federal." },
@@ -87,7 +87,7 @@ const modulos = [
         titulo: "SISC: relatórios e vigilância",
         curta: "Relatórios de usuários ativos.",
         desc: "Além do cadastro, o SISC oferece relatórios que apoiam a vigilância socioassistencial do município a entender o cenário real de atendimento.",
-        driveFileId: "SEU_ID_DRIVE_1_4",
+        driveFileId: "1STSJoIgzJSQ9gOFVNPZnZQF6EjHaWmrs",
         pdf: "./pdf/modulo-1/04-sisc-relatorios-e-vigilancia.pdf",
         baseLegal: [
           { norma: "Resolução CNAS nº 33/2012 (NOB-SUAS)", nota: "Estabelece a vigilância socioassistencial como função de gestão do SUAS, responsável por produzir e analisar informações territoriais." },
@@ -109,7 +109,7 @@ const modulos = [
         titulo: "Gessuas e benefícios eventuais",
         curta: "Fluxo do sistema e benefícios eventuais.",
         desc: "O Gessuas é outro sistema usado por municípios para gestão da assistência social. Este tópico também aborda o funcionamento dos benefícios eventuais dentro da política de assistência social.",
-        driveFileId: "SEU_ID_DRIVE_1_5",
+        driveFileId: "1AVDc3vA531wtbZpqXdhA8CKiClV8RtLA",
         pdf: "./pdf/modulo-1/05-gessuas-e-beneficios-eventuais.pdf",
         baseLegal: [
           { norma: "Lei nº 8.742/1993 (LOAS), art. 22", nota: "Institui os benefícios eventuais como provisões suplementares e provisórias da assistência social." },
@@ -131,7 +131,7 @@ const modulos = [
         titulo: "Boas práticas de gestão",
         curta: "Grupos e mapeamento de vulnerabilidades.",
         desc: "Este tópico reúne boas práticas para a organização de grupos do SCFV e para o mapeamento de vulnerabilidades das famílias atendidas, independente do sistema utilizado pelo município.",
-        driveFileId: "SEU_ID_DRIVE_1_6",
+        driveFileId: "1gT4q-35fL-AgWofmgVUqD9J00dxiUBNt",
         pdf: "./pdf/modulo-1/06-boas-praticas-de-gestao.pdf",
         baseLegal: [
           { norma: "Lei nº 13.709/2018 (LGPD)", nota: "Respalda o uso do CPF como identificador e o tratamento dos dados pessoais das famílias atendidas." },
@@ -166,7 +166,7 @@ const modulos = [
         titulo: "Atendimento no Domicílio e o PDU",
         curta: "Conceito, público-alvo e o Plano de Desenvolvimento do Usuário.",
         desc: "O atendimento no domicílio é um serviço que garante o acesso à assistência social para pessoas que não conseguem se deslocar até o CRAS. Este tópico apresenta o conceito do serviço e o instrumento usado para planejá-lo, o PDU.",
-        driveFileId: "SEU_ID_DRIVE_2_1",
+        driveFileId: "1yl55Qk9bNd_IT4rXTs8wKxJa3_8nkGjV",
         pdf: "./pdf/modulo-2/01-atendimento-no-domicilio-e-o-pdu.pdf",
         baseLegal: [
           { norma: "Resolução CNAS nº 109/2009 (Tipificação Nacional de Serviços Socioassistenciais)", nota: "Tipifica o Serviço de Proteção Social Básica no Domicílio para pessoas idosas e com deficiência." }
@@ -189,7 +189,7 @@ const modulos = [
         titulo: "O Registro Mensal de Atendimento",
         curta: "Preenchimento e validações do RMA.",
         desc: "O RMA é o sistema oficial do governo federal usado para registrar mensalmente os dados de atendimento dos equipamentos do SUAS.",
-        driveFileId: "SEU_ID_DRIVE_2_2",
+        driveFileId: "1Jb3h37YFMRPbvIeXq1VCRTFtSa6ww1sT",
         pdf: "./pdf/modulo-2/02-o-registro-mensal-de-atendimento.pdf",
         baseLegal: [
           { norma: "Resolução CIT nº 4/2011", nota: "Institui o RMA como instrumento de registro mensal de atendimentos dos equipamentos do SUAS." },
@@ -211,7 +211,7 @@ const modulos = [
         titulo: "Prontuário eletrônico",
         curta: "Histórico de atendimentos e controle de sigilo.",
         desc: "Sistemas de gestão do CRAS organizam as informações de cada pessoa em um prontuário único, com histórico completo e controle de sigilo.",
-        driveFileId: "SEU_ID_DRIVE_2_3",
+        driveFileId: "18LJmhHAbWgDvr367w8pnVWKoHfH7-UbK",
         pdf: "./pdf/modulo-2/03-prontuario-eletronico.pdf",
         baseLegal: [
           { norma: "Lei nº 13.709/2018 (LGPD)", nota: "Regula o tratamento de dados pessoais e sensíveis registrados no prontuário eletrônico." },
@@ -233,7 +233,7 @@ const modulos = [
         titulo: "Fluxo de atendimento",
         curta: "Registro de procedimentos técnicos.",
         desc: "Este tópico mostra como um atendimento é iniciado, executado e registrado dentro de um sistema de gestão socioassistencial, do primeiro contato até o fechamento do caso.",
-        driveFileId: "SEU_ID_DRIVE_2_4",
+        driveFileId: "1oWbgcJ4BG5NNOkmAzhusDARf6wagSFQE",
         pdf: "./pdf/modulo-2/04-fluxo-de-atendimento.pdf",
         baseLegal: [
           { norma: "Resolução CNAS nº 33/2012 (NOB-SUAS)", nota: "Organiza o trabalho social nos equipamentos do SUAS, incluindo a articulação com a rede socioassistencial e intersetorial." }
@@ -254,7 +254,7 @@ const modulos = [
         titulo: "Composição familiar e endereços",
         curta: "Cadastro de família e situação de rua.",
         desc: "Além do atendimento individual, o sistema precisa organizar as informações no nível da família, incluindo composição familiar, endereços e situações específicas como pessoas em situação de rua.",
-        driveFileId: "SEU_ID_DRIVE_2_5",
+        driveFileId: "1dpWRQtLMob9M3ieVlpKaRn7zz1WvtrsT",
         pdf: "./pdf/modulo-2/05-composicao-familiar-e-enderecos.pdf",
         baseLegal: [
           { norma: "Decreto nº 6.135/2007 (Cadastro Único)", nota: "Institui o CadÚnico como base de referência para a composição familiar e o endereço vinculado à família." }
@@ -276,7 +276,7 @@ const modulos = [
         titulo: "Acompanhamento intersetorial",
         curta: "Diagnóstico e evolução da família.",
         desc: "O acompanhamento familiar intersetorial reúne, em um só lugar, o diagnóstico da família, os atendimentos recebidos e a evolução ao longo do tempo.",
-        driveFileId: "SEU_ID_DRIVE_2_6",
+        driveFileId: "1p-nOdqKcpPndBciUckFEncjQAK2L0GsD",
         pdf: "./pdf/modulo-2/06-acompanhamento-intersetorial.pdf",
         baseLegal: [
           { norma: "Resolução CNAS nº 109/2009 (Tipificação Nacional de Serviços Socioassistenciais)", nota: "Tipifica o PAIF e a lógica de acompanhamento familiar continuado." },
@@ -298,7 +298,7 @@ const modulos = [
         titulo: "Gestão do SCFV",
         curta: "Grupos, vagas e listas de espera.",
         desc: "Este tópico mostra como um sistema de gestão apoia a organização prática dos grupos do Serviço de Convivência e Fortalecimento de Vínculos.",
-        driveFileId: "SEU_ID_DRIVE_2_7",
+        driveFileId: "1mjRPJRWx9qryz5ZDogrWgOBVI-3SHsPW",
         pdf: "./pdf/modulo-2/07-gestao-do-scfv.pdf",
         baseLegal: [
           { norma: "Resolução CNAS nº 109/2009 e Resolução CNAS nº 1/2013", nota: "Definem os parâmetros de faixa etária, capacidade de vagas e cofinanciamento federal dos grupos do SCFV." }
@@ -319,7 +319,7 @@ const modulos = [
         titulo: "Agendamento e frequência",
         curta: "Agenda de encontros e controle de presença.",
         desc: "Fechando o conteúdo, este tópico trata da organização da agenda dos grupos do SCFV e do controle de frequência dos participantes.",
-        driveFileId: "SEU_ID_DRIVE_2_8",
+        driveFileId: "14f4Rf0amUuQ-3yBSYIRgzDth_wQ677SS",
         pdf: "./pdf/modulo-2/08-agendamento-e-frequencia.pdf",
         baseLegal: [
           { norma: "Resolução CNAS nº 1/2013", nota: "Define a frequência mínima recomendada do SCFV e os critérios para abono de faltas justificadas." }
