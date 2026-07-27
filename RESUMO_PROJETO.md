@@ -49,8 +49,13 @@
 
 6. **Redesenho do painel lateral de aulas** (27/07): aplicado só o componente `.side-panel`/`.topic-item`/`.topic-time` do export — bolinhas circulares (26px) com borda, preenchida dourado quando ativa e verde-oliva quando concluída, linha divisória entre itens, sem mais o highlight de fundo. Decisão: **fonte (Archivo + Source Sans 3) e botões quadrados (8px) do mesmo export NÃO foram aplicados** — o site continua só com Inter e botões pill (100px), pra não contradizer a limpeza de tom feita antes.
 
+7. **Site publicado (27/07):** GitHub Pages habilitado (branch `main`, raiz), no ar em **https://vinicius957.github.io/universidade-suas/**. Testado: título, CSS, JS, `cursos.js` e PDFs carregando com HTTP 200.
+   - Cogitamos hospedar via Supabase Storage antes — **não funciona**: todo objeto público do Storage vem com `Content-Security-Policy: default-src 'none'; sandbox` fixo, o que bloqueia a execução do `script.js` (página abriria em branco). Ficou descartado; o bucket criado foi apagado.
+
+8. **Vídeos no Google Drive (27/07):** as 14 aulas foram upadas pelo usuário numa pasta "Universidade SUAS" (subpastas Módulo 1 e Módulo 2, replicando a estrutura do curso), compartilhadas como "Qualquer pessoa com o link". Os 14 `driveFileId` em `config/cursos.js` foram trocados pelos IDs reais e o commit já está publicado — confirmado ao vivo, sem placeholders restantes.
+
 ## Em aberto / decisão pendente
 
-- **Upload dos vídeos pro Google Drive** ainda não foi feito (usuário estava fazendo o upload quando a conversa mudou de assunto pros cortes). Depois do upload, falta substituir os `driveFileId` placeholder (`SEU_ID_DRIVE_X_X`) em `config/cursos.js` pelos IDs reais.
-- Roadmap do README ainda pendente: PDFs reais em `pdf/` (hoje placeholder), sistema de pesquisa, acessibilidade, performance.
-- Ideias de conteúdo cogitadas mas não implementadas: comparativo SISC x Gessuas x RMA lado a lado, FAQ por módulo, certificado de conclusão em PDF, seção "quem responde por quê" (papéis/permissões).
+- Nenhum bloqueador grande restante para o curso funcionar. Itens de roadmap (não urgentes):
+  - Roadmap do README: sistema de pesquisa, acessibilidade, performance. (PDFs em `pdf/` já são conteúdo real, um por aula — não é mais placeholder.)
+  - Ideias de conteúdo cogitadas mas não implementadas: comparativo SISC x Gessuas x RMA lado a lado, FAQ por módulo, certificado de conclusão em PDF, seção "quem responde por quê" (papéis/permissões).
