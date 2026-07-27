@@ -1,12 +1,12 @@
-# 🎓 Universidade SUAS
+# 🎓 Universidade SIABES
 
-> Plataforma web para disponibilização de conteúdos educacionais da Universidade SUAS.
+> Plataforma web para disponibilização de conteúdos educacionais da Universidade SIABES.
 
 ---
 
 ## 📖 Sobre
 
-A Universidade SUAS é um ambiente digital desenvolvido para centralizar cursos, videoaulas e materiais de apoio em uma interface simples, moderna e intuitiva.
+A Universidade SIABES é um ambiente digital desenvolvido para centralizar cursos, videoaulas e materiais de apoio em uma interface simples, moderna e intuitiva.
 
 O projeto foi concebido para funcionar integrado à plataforma Lumio, permitindo que os usuários acessem conteúdos de capacitação de forma organizada e eficiente.
 ---

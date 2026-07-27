@@ -1,4 +1,4 @@
-// Fonte única de dados dos módulos/aulas da Universidade SUAS.
+// Fonte única de dados dos módulos/aulas da Universidade SIABES.
 // Cada aula = 1 vídeo curto (um tópico do módulo). Depois de subir o clipe
 // no Google Drive, troque driveFileId pelo ID do arquivo
 // (Compartilhar → Qualquer pessoa com o link → "Ver" → copiar o trecho entre /d/ e /view).
@@ -12,7 +12,7 @@ const modulos = [
     accent: "gold",
     tema: "O SCFV e os sistemas de gestão",
     descricao: "Nesta trilha você vai entender o funcionamento do Serviço de Convivência e Fortalecimento de Vínculos (SCFV) e os principais sistemas usados para geri-lo nos municípios — o SISC e o Gessuas.",
-    meta: "≈ 2h · 6 aulas",
+    meta: "2h · 6 aulas",
     aulas: [
       {
         id: 1,
@@ -21,6 +21,10 @@ const modulos = [
         desc: "O Serviço de Convivência e Fortalecimento de Vínculos (SCFV) é um serviço da Proteção Social Básica do SUAS, oferecido em grupos, com o objetivo de prevenir riscos e vulnerabilidades sociais. Ele funciona como um complemento ao trabalho social realizado com as famílias.",
         driveFileId: "SEU_ID_DRIVE_1_1",
         pdf: "./pdf/modulo-1/01-o-que-e-o-scfv.pdf",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 109/2009 (Tipificação Nacional de Serviços Socioassistenciais)", nota: "Tipifica o SCFV como serviço de Proteção Social Básica, definindo objetivos, público e resultados esperados em âmbito nacional." },
+          { norma: "Resolução CNAS nº 1/2013", nota: "Reordena o SCFV, unificando os critérios de cofinanciamento federal e os parâmetros mínimos de funcionamento do serviço." }
+        ],
         quiz: [
           { pergunta: "Que tipo de parceiro pode executar o SCFV junto com o CRAS?", opcoes: ["Uma Organização da Sociedade Civil (OSC)", "Uma empresa privada com fins lucrativos", "O CREAS", "O Conselho Tutelar"], correta: 0 },
           { pergunta: "Qual desses NÃO é um dos eixos norteadores do SCFV?", opcoes: ["Convivência social", "Direito de ser", "Participação", "Alta complexidade"], correta: 3 }
@@ -38,6 +42,10 @@ const modulos = [
         desc: "O SCFV organiza suas atividades de acordo com a faixa etária dos usuários e prioriza o atendimento de pessoas em maior situação de vulnerabilidade.",
         driveFileId: "SEU_ID_DRIVE_1_2",
         pdf: "./pdf/modulo-1/02-publico-prioritario-e-ciclos-de-vida.pdf",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 1/2013", nota: "Define o público prioritário do SCFV e a organização das atividades por ciclo de vida, com meta mínima de vagas para esse público." },
+          { norma: "Lei nº 8.069/1990 (ECA) e Lei nº 10.741/2003 (Estatuto do Idoso)", nota: "Fundamentam a atenção diferenciada por faixa etária nos grupos do serviço, da infância à terceira idade." }
+        ],
         quiz: [
           { pergunta: "Qual o percentual mínimo de vagas do SCFV que deve ser destinado ao público prioritário?", opcoes: ["25%", "50%", "75%", "100%"], correta: 1 },
           { pergunta: "Qual sistema acompanha o cumprimento da meta de vagas para o público prioritário?", opcoes: ["RMA", "Gessuas", "SISC", "CadÚnico"], correta: 2 },
@@ -58,6 +66,10 @@ const modulos = [
         desc: "O SISC (Sistema de Informações do SCFV) é o sistema oficial usado para monitorar o cumprimento das metas do SCFV pelos municípios. O correto preenchimento dele impacta diretamente o repasse de cofinanciamento federal.",
         driveFileId: "SEU_ID_DRIVE_1_3",
         pdf: "./pdf/modulo-1/03-o-sistema-sisc-prazos-e-cadastro.pdf",
+        baseLegal: [
+          { norma: "Portaria MDS nº 134/2013", nota: "Institui o SISC como instrumento de gestão do SCFV para fins de acompanhamento e cofinanciamento federal." },
+          { norma: "Portaria MDS nº 1.176/2026", nota: "Atualiza os critérios de cofinanciamento vinculados ao correto preenchimento do sistema pelos municípios." }
+        ],
         quiz: [
           { pergunta: "O que acontece se o município perder o prazo de lançamento no SISC?", opcoes: ["Nada, pode lançar depois normalmente", "O repasse de cofinanciamento pode ser suspenso, sem recuperação retroativa", "Apenas recebe um aviso por e-mail", "O prazo se estende automaticamente por mais 30 dias"], correta: 1 },
           { pergunta: "Existe integração automática entre o SISC e o RMA?", opcoes: ["Sim, totalmente automática", "Sim, mas só para dados de famílias prioritárias", "Não — as equipes precisam repetir o trabalho manualmente em mais de uma plataforma", "Não existe RMA, apenas o SISC"], correta: 2 }
@@ -77,6 +89,10 @@ const modulos = [
         desc: "Além do cadastro, o SISC oferece relatórios que apoiam a vigilância socioassistencial do município a entender o cenário real de atendimento.",
         driveFileId: "SEU_ID_DRIVE_1_4",
         pdf: "./pdf/modulo-1/04-sisc-relatorios-e-vigilancia.pdf",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 33/2012 (NOB-SUAS)", nota: "Estabelece a vigilância socioassistencial como função de gestão do SUAS, responsável por produzir e analisar informações territoriais." },
+          { norma: "Resolução CNAS nº 145/2004 (PNAS)", nota: "Origem do conceito de vigilância socioassistencial retomado pelos relatórios do SISC." }
+        ],
         quiz: [
           { pergunta: "Por que o SISC não deve ser usado para contabilizar atividades esportivas avulsas sem vínculo pedagógico?", opcoes: ["Porque é proibido por lei federal específica", "Porque isso distorce os indicadores de vigilância socioassistencial", "Porque o sistema trava com esse tipo de dado", "Porque essas atividades já são registradas automaticamente pelo RMA"], correta: 1 },
           { pergunta: "Os relatórios do SISC segmentam usuários por quais critérios, segundo o material?", opcoes: ["Apenas por sexo e idade", "Público prioritário e faixa etária", "Apenas por unidade do CRAS", "Renda familiar e escolaridade"], correta: 1 }
@@ -95,6 +111,10 @@ const modulos = [
         desc: "O Gessuas é outro sistema usado por municípios para gestão da assistência social. Este tópico também aborda o funcionamento dos benefícios eventuais dentro da política de assistência social.",
         driveFileId: "SEU_ID_DRIVE_1_5",
         pdf: "./pdf/modulo-1/05-gessuas-e-beneficios-eventuais.pdf",
+        baseLegal: [
+          { norma: "Lei nº 8.742/1993 (LOAS), art. 22", nota: "Institui os benefícios eventuais como provisões suplementares e provisórias da assistência social." },
+          { norma: "Decreto nº 6.307/2007", nota: "Regulamenta os benefícios eventuais, incluindo o prazo de até seis meses para vulnerabilidades temporárias." }
+        ],
         quiz: [
           { pergunta: "Qual crítica o material faz ao sistema Gessuas?", opcoes: ["Ele não permite cadastro de famílias", "Seu fluxo de trabalho é fragmentado, exigindo navegar por várias abas para tarefas simples", "Ele substitui completamente o SISC", "Ele só funciona offline"], correta: 1 },
           { pergunta: "Por quanto tempo, no máximo, um benefício eventual responde a uma vulnerabilidade temporária?", opcoes: ["Até 1 mês", "Até 3 meses", "Até 6 meses", "Por tempo indeterminado"], correta: 2 }
@@ -113,6 +133,10 @@ const modulos = [
         desc: "Este tópico reúne boas práticas para a organização de grupos do SCFV e para o mapeamento de vulnerabilidades das famílias atendidas, independente do sistema utilizado pelo município.",
         driveFileId: "SEU_ID_DRIVE_1_6",
         pdf: "./pdf/modulo-1/06-boas-praticas-de-gestao.pdf",
+        baseLegal: [
+          { norma: "Lei nº 13.709/2018 (LGPD)", nota: "Respalda o uso do CPF como identificador e o tratamento dos dados pessoais das famílias atendidas." },
+          { norma: "Resolução CFESS nº 273/1993 (Código de Ética do/a Assistente Social)", nota: "Orienta o sigilo profissional no registro de vulnerabilidades e diagnósticos das famílias." }
+        ],
         quiz: [
           { pergunta: "Qual identificador o material recomenda usar como principal das famílias, para evitar duplicidade de cadastro?", opcoes: ["O NIS", "O nome completo", "O CPF", "O número do Cadastro Único"], correta: 2 },
           { pergunta: "Qual é a carga horária normativa das oficinas do SCFV por encontro?", opcoes: ["30 minutos", "1 hora", "1h30", "3 horas"], correta: 2 },
@@ -135,7 +159,7 @@ const modulos = [
     accent: "olive",
     tema: "Atendimento no Domicílio, RMA e CRAS",
     descricao: "Nesta trilha você vai conhecer o Atendimento no Domicílio e o PDU, entender o RMA e explorar como um sistema de gestão do CRAS organiza prontuários, atendimentos e os grupos do SCFV.",
-    meta: "≈ 2h · 8 aulas",
+    meta: "2h · 8 aulas",
     aulas: [
       {
         id: 7,
@@ -144,6 +168,9 @@ const modulos = [
         desc: "O atendimento no domicílio é um serviço que garante o acesso à assistência social para pessoas que não conseguem se deslocar até o CRAS. Este tópico apresenta o conceito do serviço e o instrumento usado para planejá-lo, o PDU.",
         driveFileId: "SEU_ID_DRIVE_2_1",
         pdf: "./pdf/modulo-2/01-atendimento-no-domicilio-e-o-pdu.pdf",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 109/2009 (Tipificação Nacional de Serviços Socioassistenciais)", nota: "Tipifica o Serviço de Proteção Social Básica no Domicílio para pessoas idosas e com deficiência." }
+        ],
         quiz: [
           { pergunta: "Qual é o instrumento central de planejamento do Atendimento no Domicílio?", opcoes: ["O RMA", "O PDU (Plano de Desenvolvimento do Usuário)", "O PAIF", "O Censo SUAS"], correta: 1 },
           { pergunta: "Qual a capacidade de atendimento por equipe, segundo o material?", opcoes: ["Até 5 usuários", "Até 20 usuários", "Até 50 usuários", "Não há limite definido"], correta: 1 },
@@ -164,6 +191,10 @@ const modulos = [
         desc: "O RMA é o sistema oficial do governo federal usado para registrar mensalmente os dados de atendimento dos equipamentos do SUAS.",
         driveFileId: "SEU_ID_DRIVE_2_2",
         pdf: "./pdf/modulo-2/02-o-registro-mensal-de-atendimento.pdf",
+        baseLegal: [
+          { norma: "Resolução CIT nº 4/2011", nota: "Institui o RMA como instrumento de registro mensal de atendimentos dos equipamentos do SUAS." },
+          { norma: "Resolução CIT nº 2/2017", nota: "Atualiza os formulários e as validações automáticas do RMA." }
+        ],
         quiz: [
           { pergunta: "Quem disponibiliza o sistema RMA?", opcoes: ["O MDS (Ministério do Desenvolvimento Social)", "A Secretaria Municipal de Assistência Social", "O CRAS diretamente", "O SISC"], correta: 0 },
           { pergunta: "Qual validação automática o material cita como exemplo no RMA?", opcoes: ["O número de famílias novas não pode ser maior que o total de famílias inseridas", "O CPF precisa ter selo digital", "Todo atendimento precisa de assinatura do coordenador", "Não existem validações automáticas no RMA"], correta: 0 }
@@ -182,6 +213,10 @@ const modulos = [
         desc: "Sistemas de gestão do CRAS organizam as informações de cada pessoa em um prontuário único, com histórico completo e controle de sigilo.",
         driveFileId: "SEU_ID_DRIVE_2_3",
         pdf: "./pdf/modulo-2/03-prontuario-eletronico.pdf",
+        baseLegal: [
+          { norma: "Lei nº 13.709/2018 (LGPD)", nota: "Regula o tratamento de dados pessoais e sensíveis registrados no prontuário eletrônico." },
+          { norma: "Resolução CFESS nº 273/1993 (Código de Ética do/a Assistente Social)", nota: "Fundamenta o controle de sigilo sobre atendimentos técnicos marcados como sigilosos." }
+        ],
         quiz: [
           { pergunta: "O que o recurso de \"controle de sigilo\" permite fazer no prontuário eletrônico?", opcoes: ["Excluir atendimentos antigos automaticamente", "Marcar atendimentos como sigilosos, restringindo o acesso a técnicos autorizados", "Compartilhar o prontuário com qualquer usuário do sistema", "Bloquear o cadastro de novos atendimentos"], correta: 1 },
           { pergunta: "Além do nome, por quais outros dados é possível buscar uma pessoa no sistema?", opcoes: ["Apenas pelo endereço", "CPF ou código familiar", "Apenas pelo número do RMA", "Apenas pela unidade de referência"], correta: 1 }
@@ -200,6 +235,9 @@ const modulos = [
         desc: "Este tópico mostra como um atendimento é iniciado, executado e registrado dentro de um sistema de gestão socioassistencial, do primeiro contato até o fechamento do caso.",
         driveFileId: "SEU_ID_DRIVE_2_4",
         pdf: "./pdf/modulo-2/04-fluxo-de-atendimento.pdf",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 33/2012 (NOB-SUAS)", nota: "Organiza o trabalho social nos equipamentos do SUAS, incluindo a articulação com a rede socioassistencial e intersetorial." }
+        ],
         quiz: [
           { pergunta: "Como um atendimento pode ser classificado, segundo o material?", opcoes: ["Urgente, normal ou de rotina", "Simplificado, técnico ou de cadastro único", "Presencial ou remoto", "Individual ou coletivo"], correta: 1 },
           { pergunta: "O que diferencia \"rede socioassistencial\" de \"rede intersetorial\"?", opcoes: ["São a mesma coisa com nomes diferentes", "Rede socioassistencial são os equipamentos do SUAS; rede intersetorial envolve saúde, educação, conselho tutelar", "Rede intersetorial só existe em capitais", "Rede socioassistencial é privada; rede intersetorial é pública"], correta: 1 }
@@ -218,6 +256,9 @@ const modulos = [
         desc: "Além do atendimento individual, o sistema precisa organizar as informações no nível da família, incluindo composição familiar, endereços e situações específicas como pessoas em situação de rua.",
         driveFileId: "SEU_ID_DRIVE_2_5",
         pdf: "./pdf/modulo-2/05-composicao-familiar-e-enderecos.pdf",
+        baseLegal: [
+          { norma: "Decreto nº 6.135/2007 (Cadastro Único)", nota: "Institui o CadÚnico como base de referência para a composição familiar e o endereço vinculado à família." }
+        ],
         quiz: [
           { pergunta: "O que acontece com o histórico de endereços de uma família no sistema?", opcoes: ["É apagado a cada mudança de endereço", "Fica mantido, com histórico completo de alterações", "Só o endereço mais recente é salvo", "Não é possível registrar mais de um endereço por família"], correta: 1 },
           { pergunta: "Para famílias em situação de rua, o que o sistema deve fazer?", opcoes: ["Impedir o cadastro até haver um endereço fixo", "Liberar campos descritivos específicos, sem exigir endereço fixo", "Cadastrar automaticamente o endereço do CRAS", "Recusar o atendimento até regularização"], correta: 1 }
@@ -237,6 +278,10 @@ const modulos = [
         desc: "O acompanhamento familiar intersetorial reúne, em um só lugar, o diagnóstico da família, os atendimentos recebidos e a evolução ao longo do tempo.",
         driveFileId: "SEU_ID_DRIVE_2_6",
         pdf: "./pdf/modulo-2/06-acompanhamento-intersetorial.pdf",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 109/2009 (Tipificação Nacional de Serviços Socioassistenciais)", nota: "Tipifica o PAIF e a lógica de acompanhamento familiar continuado." },
+          { norma: "Resolução CNAS nº 145/2004 (PNAS)", nota: "Estabelece a matricialidade sociofamiliar como princípio organizador do acompanhamento." }
+        ],
         quiz: [
           { pergunta: "O que é preciso registrar para encerrar o acompanhamento de uma família?", opcoes: ["Apenas um clique de \"arquivar\"", "Data de desligamento, motivo e relatório final de evolução", "Só a assinatura do coordenador", "Nada, o sistema encerra automaticamente após 1 ano"], correta: 1 },
           { pergunta: "O que caracteriza a \"visão viva\" da família no acompanhamento?", opcoes: ["Um vídeo de apresentação da família", "A integração automática de novos atendimentos, encaminhamentos e visitas conforme acontecem", "Uma foto atualizada da família a cada visita", "Um selo de \"família ativa\" que nunca muda"], correta: 1 }
@@ -255,6 +300,9 @@ const modulos = [
         desc: "Este tópico mostra como um sistema de gestão apoia a organização prática dos grupos do Serviço de Convivência e Fortalecimento de Vínculos.",
         driveFileId: "SEU_ID_DRIVE_2_7",
         pdf: "./pdf/modulo-2/07-gestao-do-scfv.pdf",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 109/2009 e Resolução CNAS nº 1/2013", nota: "Definem os parâmetros de faixa etária, capacidade de vagas e cofinanciamento federal dos grupos do SCFV." }
+        ],
         quiz: [
           { pergunta: "Por que a classificação correta das faixas etárias dos grupos é importante?", opcoes: ["É só uma formalidade sem consequência prática", "É essencial para o reconhecimento do grupo pelo sistema federal e o cofinanciamento", "Define a cor do crachá dos participantes", "Só importa para grupos de idosos"], correta: 1 },
           { pergunta: "O que o sistema deve manter sobre a lista de espera, segundo o material?", opcoes: ["Nenhum histórico, apenas a lista atual", "Um histórico auditável dos motivos de remoção", "Um ranking público dos que esperam mais tempo", "Apenas o nome, sem outros dados"], correta: 1 }
@@ -273,6 +321,9 @@ const modulos = [
         desc: "Fechando o conteúdo, este tópico trata da organização da agenda dos grupos do SCFV e do controle de frequência dos participantes.",
         driveFileId: "SEU_ID_DRIVE_2_8",
         pdf: "./pdf/modulo-2/08-agendamento-e-frequencia.pdf",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 1/2013", nota: "Define a frequência mínima recomendada do SCFV e os critérios para abono de faltas justificadas." }
+        ],
         quiz: [
           { pergunta: "Como uma falta pode ser justificada no sistema, segundo o material?", opcoes: ["Apenas por telefone com a coordenação", "Com anexos documentais", "Faltas não podem ser justificadas", "Só com atestado médico, nenhum outro documento"], correta: 1 },
           { pergunta: "Para ausências temporárias e previstas, o que o sistema pode automatizar?", opcoes: ["Cancelar a vaga do participante permanentemente", "O abono de faltas por um período determinado", "Transferir o participante para outro grupo automaticamente", "Não há esse recurso no sistema"], correta: 1 }

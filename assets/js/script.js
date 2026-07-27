@@ -236,6 +236,14 @@ function loadAula(id){
     resumoEl.appendChild(li);
   });
 
+  const baseLegalEl = document.getElementById('aula-base-legal');
+  baseLegalEl.innerHTML = '';
+  (aula.baseLegal || []).forEach(ref => {
+    const li = document.createElement('li');
+    li.innerHTML = '<b>' + ref.norma + '</b> — ' + ref.nota;
+    baseLegalEl.appendChild(li);
+  });
+
   renderSidePanel(modulo, aula);
   renderQuiz(aula);
 
