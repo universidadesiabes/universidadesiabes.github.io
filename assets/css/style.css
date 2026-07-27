@@ -40,9 +40,10 @@
     border-bottom:1px solid rgba(255,255,255,0.08);
   }
   .nav-left{display:flex;align-items:center;gap:10px;}
+  .nav-logo-icon{height:24px;width:auto;display:block;}
   .nav-logo{
     font-family:'Inter',sans-serif;font-weight:700;
-    font-size:21px;letter-spacing:0.2px;
+    font-size:18px;letter-spacing:0.2px;
   }
   .nav-crumb{
     font-size:12.5px;color:rgba(255,255,255,0.5);border-left:1px solid rgba(255,255,255,0.2);
@@ -96,10 +97,15 @@
   }
   .eyebrow::before,.eyebrow::after{content:'';width:22px;height:1px;background:var(--gold-soft);}
   .hero h1{
-    font-family:'Inter',sans-serif;font-weight:600;
-    font-size:clamp(36px,5.6vw,60px);line-height:1.08;margin:0 0 22px;letter-spacing:-0.01em;
+    font-family:'Newsreader',serif;font-style:italic;font-weight:600;color:var(--gold);
+    font-size:clamp(40px,6.2vw,68px);line-height:1.1;margin:0 0 18px;letter-spacing:0;
   }
-  .hero h1 em{font-style:normal;font-weight:700;color:var(--gold-soft);}
+  .hero h1 em{font-style:italic;font-weight:700;color:#fff;}
+  .hero-tagline{
+    font-family:'Inter',sans-serif;font-weight:500;
+    font-size:18px;line-height:1.5;color:rgba(255,255,255,0.82);margin:0 0 22px;
+  }
+  .hero-tagline em{font-style:normal;font-weight:700;color:#fff;}
   .hero p.lede{
     font-size:17.5px;line-height:1.65;color:rgba(255,255,255,0.76);
     max-width:560px;margin:0 auto 38px;
