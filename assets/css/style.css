@@ -26,7 +26,7 @@
   a{color:inherit;text-decoration:none;}
   button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
-  /* ---------- decorative spiral pattern (shared) ---------- */
+  /* ---------- decorative spiral pattern (shared: trilha + rodapé) ---------- */
   .spiral-field{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
   .spiral-field svg{position:absolute;}
 
@@ -95,7 +95,6 @@
     text-transform:uppercase;color:var(--gold-soft);margin-bottom:22px;
     display:inline-flex;align-items:center;gap:10px;
   }
-  .eyebrow::before,.eyebrow::after{content:'';width:22px;height:1px;background:var(--gold-soft);}
   .hero h1{
     font-family:'Newsreader',serif;font-style:italic;font-weight:600;color:var(--gold);
     font-size:clamp(40px,6.2vw,68px);line-height:1.1;margin:0 0 18px;letter-spacing:0;
