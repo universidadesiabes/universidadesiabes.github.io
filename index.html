@@ -6,7 +6,7 @@
 <title>Universidade Siabes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -30,6 +30,7 @@
   <!-- ============ HOME ============ -->
   <section class="view is-active" id="view-home">
     <div class="hero">
+      <canvas class="hero-network" aria-hidden="true"></canvas>
       <div class="hero-inner">
         <div class="eyebrow">Formação continuada · Rede SUAS</div>
         <h1>Universidade Siabes</h1>
@@ -247,7 +248,7 @@
         </div>
         <div class="journey trail">
           <svg class="trail-svg" viewBox="0 0 52 460" preserveAspectRatio="none">
-            <path d="M26 26 C 10 130, 42 210, 26 290 C 14 350, 38 390, 26 434" stroke="#E4DCC9" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+            <path d="M26 26 C 10 130, 42 210, 26 290 C 14 350, 38 390, 26 434" stroke="var(--line)" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
           </svg>
           <div class="trail-node">
             <div class="trail-marker"><div class="trail-dot has-number">1</div></div>
@@ -339,14 +340,6 @@
   <!-- ============ TRILHA ============ -->
   <section class="view" id="view-trilha">
     <div class="trilha-wrap">
-      <div class="spiral-field" aria-hidden="true">
-        <svg width="380" height="380" viewBox="0 0 380 380" style="right:-160px;top:40px;" fill="none">
-          <g stroke="rgba(14,37,64,0.06)" stroke-width="1.4">
-            <circle cx="190" cy="190" r="26"/><circle cx="190" cy="190" r="50"/><circle cx="190" cy="190" r="74"/>
-            <circle cx="190" cy="190" r="98"/><circle cx="190" cy="190" r="122"/><circle cx="190" cy="190" r="146"/>
-          </g>
-        </svg>
-      </div>
       <a href="#" class="back-btn" data-nav="home">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Voltar ao início
@@ -359,7 +352,7 @@
 
       <div class="trail">
         <svg class="trail-svg" viewBox="0 0 52 460" preserveAspectRatio="none">
-          <path d="M26 26 C 10 130, 42 210, 26 290 C 14 350, 38 390, 26 434" stroke="#E4DCC9" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
+          <path d="M26 26 C 10 130, 42 210, 26 290 C 14 350, 38 390, 26 434" stroke="var(--line)" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
         </svg>
 
         <div id="trail-modules"></div>
@@ -479,14 +472,6 @@
   </section>
 
   <footer>
-    <div class="spiral-field" aria-hidden="true">
-      <svg width="300" height="300" viewBox="0 0 300 300" style="left:-100px;bottom:-140px;" fill="none">
-        <g stroke="rgba(232,169,23,0.14)" stroke-width="1.4">
-          <circle cx="150" cy="150" r="20"/><circle cx="150" cy="150" r="40"/><circle cx="150" cy="150" r="60"/>
-          <circle cx="150" cy="150" r="80"/><circle cx="150" cy="150" r="100"/><circle cx="150" cy="150" r="120"/>
-        </g>
-      </svg>
-    </div>
     <div class="footer-inner">
       <b>Universidade SIABES</b> — protótipo navegável, acessado a partir da Central de Tutoriais (Lumio) · conteúdo de exemplo para validação de layout
     </div>
@@ -494,6 +479,7 @@
 
   <script src="config/cursos.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/hero-network.js"></script>
 
 </body>
 </html>
