@@ -40,6 +40,8 @@
     border-bottom:1px solid rgba(255,255,255,0.08);
   }
   .nav-left{display:flex;align-items:center;gap:10px;}
+  .nav-logo-link{display:flex;align-items:center;gap:10px;transition:opacity .16s ease;}
+  .nav-logo-link:hover{opacity:0.82;}
   .nav-logo-icon{height:24px;width:auto;display:block;}
   .nav-logo{
     font-family:'Inter',sans-serif;font-weight:700;
@@ -74,6 +76,13 @@
     .nav-links{gap:16px;}
     .nav-crumb{display:none;}
   }
+  @media (max-width:480px){
+    .nav{padding:12px 14px;}
+    .nav-logo{display:none;}
+    .nav-links{gap:10px;}
+    .nav-link{font-size:12.5px;}
+    .nav-pill{font-size:12px;padding:7px 12px;}
+  }
 
   /* ---------- VIEW SWITCHING ---------- */
   .view{display:none;animation:fadeIn .45s ease;}
@@ -89,6 +98,7 @@
     background:linear-gradient(175deg, var(--navy) 0%, #0A1C33 100%);
     color:#fff;padding:96px 40px 84px;position:relative;overflow:hidden;
   }
+  @media (max-width:480px){.hero{padding:64px 20px 56px;}}
   .hero-inner{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:2;}
   .eyebrow{
     font-family:'Inter',sans-serif;font-size:12px;letter-spacing:0.14em;
@@ -128,6 +138,7 @@
   /* ---------- SECTION: about + preview cards ---------- */
   .section-band{background:var(--paper-warm);}
   .section{padding:84px 40px;max-width:1080px;margin:0 auto;}
+  @media (max-width:480px){.section{padding:56px 20px;}}
   .section-head{max-width:600px;margin-bottom:46px;}
   .section-eyebrow{
     font-family:'Inter',sans-serif;font-size:12px;letter-spacing:0.1em;
