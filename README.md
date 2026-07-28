@@ -2,6 +2,8 @@
 
 > Plataforma web para disponibilização de conteúdos educacionais da Universidade SIABES.
 
+**Ao vivo:** https://universidadesiabes.github.io/
+
 ---
 
 ## 📖 Sobre
@@ -54,16 +56,17 @@ config/cursos.js
 # 📁 Estrutura do Projeto
 
 ```text
-universidade-suas/
+universidadesiabes.github.io/
 │
 ├── assets/
 │   ├── css/
-│   └── js/
+│   ├── js/
+│   └── img/
 │
 ├── config/
-│   └── cursos.js        # fonte única de dados dos cursos (vídeo, pdf, tópicos, resumo)
+│   └── cursos.js        # fonte única de dados dos cursos (vídeo, pdf, tópicos, resumo, base legal, quiz)
 │
-├── pdf/                  # materiais em PDF baixáveis (ver pdf/README.md)
+├── pdf/                  # materiais em PDF baixáveis, um por aula (ver pdf/README.md)
 │
 ├── index.html
 ├── README.md
@@ -87,13 +90,13 @@ universidade-suas/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/Vinicius957/universidade-suas.git
+git clone https://github.com/universidadesiabes/universidadesiabes.github.io.git
 ```
 
 Entre na pasta:
 
 ```bash
-cd universidade-suas
+cd universidadesiabes.github.io
 ```
 
 Abra o arquivo:
@@ -118,15 +121,19 @@ O projeto segue uma estrutura modular.
 
 - [x] Estrutura inicial
 - [x] Organização das pastas
-- [x] Publicação no GitHub
+- [x] Publicação no GitHub (GitHub Pages, `universidadesiabes.github.io`)
 - [x] Interface principal
-- [x] Catálogo de cursos
-- [x] Página de aulas
-- [ ] Vídeos publicados no Google Drive (hoje o campo `driveFileId` em `config/cursos.js` está com placeholder)
-- [ ] PDFs reais em `pdf/` (ver `pdf/README.md`)
+- [x] Catálogo de cursos (2 módulos, 14 aulas)
+- [x] Página de aulas, com progresso, base legal e quiz por aula
+- [x] Vídeos publicados no Google Drive (14 aulas, `driveFileId` real em `config/cursos.js`)
+- [x] PDFs reais em `pdf/` (um por aula, ver `pdf/README.md`)
 - [ ] Sistema de pesquisa
 - [ ] Melhorias de acessibilidade
 - [ ] Otimização de desempenho
+- [ ] Comparativo SISC x Gessuas x RMA lado a lado
+- [ ] FAQ por módulo
+- [ ] Certificado de conclusão em PDF
+- [ ] Seção "quem responde por quê" (papéis/permissões)
 
 ---
 

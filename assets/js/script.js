@@ -1,7 +1,7 @@
 const PROGRESSO_KEY = 'suas_progresso_aulas';
 let aulaAtualId = null;
 
-function findAula(id){
+function findAula(id) {
   const numId = Number(id);
   for (const modulo of modulos) {
     const aula = modulo.aulas.find(a => a.id === numId);
@@ -10,7 +10,7 @@ function findAula(id){
   return null;
 }
 
-function todasAulasEmOrdem(){
+function todasAulasEmOrdem() {
   return modulos.flatMap(m => m.aulas);
 }
 
@@ -34,42 +34,42 @@ const progressoStorage = (() => {
   }
 })();
 
-function getProgresso(){
+function getProgresso() {
   try {
     return new Set(JSON.parse(progressoStorage.getItem(PROGRESSO_KEY)) || []);
   } catch (e) {
     return new Set();
   }
 }
-function salvarProgresso(set){
+function salvarProgresso(set) {
   progressoStorage.setItem(PROGRESSO_KEY, JSON.stringify([...set]));
 }
-function isAulaConcluida(id){
+function isAulaConcluida(id) {
   return getProgresso().has(Number(id));
 }
-function toggleAulaConcluida(id){
+function toggleAulaConcluida(id) {
   const set = getProgresso();
   const numId = Number(id);
   if (set.has(numId)) set.delete(numId); else set.add(numId);
   salvarProgresso(set);
 }
-function calcularProgressoModulo(modulo){
+function calcularProgressoModulo(modulo) {
   const set = getProgresso();
   const concluidas = modulo.aulas.filter(a => set.has(a.id)).length;
   const total = modulo.aulas.length;
   return { concluidas, total, pct: total ? Math.round((concluidas / total) * 100) : 0 };
 }
-function calcularProgressoGeral(){
+function calcularProgressoGeral() {
   const set = getProgresso();
   const total = modulos.reduce((s, m) => s + m.aulas.length, 0);
   const concluidas = modulos.reduce((s, m) => s + m.aulas.filter(a => set.has(a.id)).length, 0);
   return { concluidas, total, pct: total ? Math.round((concluidas / total) * 100) : 0 };
 }
-function proximaAulaDoModulo(modulo){
+function proximaAulaDoModulo(modulo) {
   const set = getProgresso();
   return modulo.aulas.find(a => !set.has(a.id)) || modulo.aulas[0];
 }
-function atualizarNavProgresso(){
+function atualizarNavProgresso() {
   const el = document.getElementById('nav-progresso');
   if (!el) return;
   el.textContent = 'Progresso · ' + calcularProgressoGeral().pct + '%';
@@ -77,25 +77,25 @@ function atualizarNavProgresso(){
 
 // ---- Quiz (Atividade) por aula — resultado persistido no mesmo esquema de storage ----
 const QUIZ_KEY = 'suas_quiz_resultados';
-function getQuizResultados(){
+function getQuizResultados() {
   try {
     return JSON.parse(progressoStorage.getItem(QUIZ_KEY)) || {};
   } catch (e) {
     return {};
   }
 }
-function salvarQuizResultado(aulaId, acertos, total){
+function salvarQuizResultado(aulaId, acertos, total) {
   const resultados = getQuizResultados();
   resultados[aulaId] = { acertos, total };
   progressoStorage.setItem(QUIZ_KEY, JSON.stringify(resultados));
 }
-function calcularQuizGeral(){
+function calcularQuizGeral() {
   const resultados = getQuizResultados();
   const total = modulos.reduce((s, m) => s + m.aulas.length, 0);
   return { feitas: Object.keys(resultados).length, total };
 }
 
-function renderQuiz(aula){
+function renderQuiz(aula) {
   const container = document.getElementById('quiz-container');
   container.innerHTML = '';
   aula.quiz.forEach((q, qi) => {
@@ -123,7 +123,7 @@ function renderQuiz(aula){
   }
 }
 
-function corrigirQuiz(){
+function corrigirQuiz() {
   if (aulaAtualId == null) return;
   const found = findAula(aulaAtualId);
   if (!found) return;
@@ -162,22 +162,22 @@ function corrigirQuiz(){
   salvarQuizResultado(aula.id, acertos, total);
 }
 
-function refazerQuiz(){
+function refazerQuiz() {
   if (aulaAtualId == null) return;
   const found = findAula(aulaAtualId);
   if (found) renderQuiz(found.aula);
 }
 
-function driveEmbedUrl(fileId){
+function driveEmbedUrl(fileId) {
   return 'https://drive.google.com/file/d/' + fileId + '/preview';
 }
 
 // Troca o vídeo carregado no player ao trocar de aula.
-function loadPlayerVideo(driveFileId){
+function loadPlayerVideo(driveFileId) {
   document.getElementById('drive-player').src = driveEmbedUrl(driveFileId);
 }
 
-function showView(name){
+function showView(name) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('is-active'));
   document.getElementById('view-' + name).classList.add('is-active');
   document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('is-active'));
@@ -188,11 +188,11 @@ function showView(name){
   if (name === 'trilha') renderTrilha();
   if (name === 'progresso') renderProgresso();
 
-  window.scrollTo({top:0, behavior:'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Lista as aulas irmãs (mesmo módulo) no side-panel, com check nas concluídas.
-function renderSidePanel(modulo, aula){
+function renderSidePanel(modulo, aula) {
   document.getElementById('side-panel-title').textContent = modulo.titulo + ' · outras aulas';
   const listEl = document.getElementById('topic-list');
   listEl.innerHTML = '';
@@ -206,13 +206,13 @@ function renderSidePanel(modulo, aula){
   });
 }
 
-function atualizarBotaoConcluida(id){
+function atualizarBotaoConcluida(id) {
   const done = isAulaConcluida(id);
   document.getElementById('btn-concluida').classList.toggle('is-done', done);
   document.getElementById('btn-concluida-label').textContent = done ? 'Concluída' : 'Marcar como concluída';
 }
 
-function loadAula(id){
+function loadAula(id) {
   const found = findAula(id);
   if (!found) return;
   const { aula, modulo } = found;
@@ -264,7 +264,7 @@ function loadAula(id){
 }
 
 // ---- Home: 1 card de preview por módulo ----
-function renderHome(){
+function renderHome() {
   const container = document.getElementById('cards-row');
   container.innerHTML = '';
   modulos.forEach(modulo => {
@@ -287,7 +287,7 @@ function renderHome(){
 }
 
 // ---- Trilha: 1 nó por módulo, com progresso real e as aulas do módulo dentro do accordion ----
-function renderTrilha(){
+function renderTrilha() {
   const container = document.getElementById('trail-modules');
   container.innerHTML = '';
   modulos.forEach(modulo => {
@@ -300,25 +300,25 @@ function renderTrilha(){
     node.innerHTML =
       '<div class="trail-marker"><div class="trail-dot"></div></div>' +
       '<div class="trail-card">' +
-        '<div class="trail-eyebrow">' + modulo.titulo + '</div>' +
-        '<h3>' + modulo.tema + '</h3>' +
-        '<p>' + modulo.descricao + '</p>' +
-        '<div class="trail-progress"><div style="width:' + pct + '%"></div></div>' +
-        '<div class="trail-footer">' +
-          '<span class="trail-meta">' + concluidas + ' de ' + total + ' aulas · ' + statusTexto + '</span>' +
-          '<button class="btn-mini" style="color:var(--' + modulo.accent + ');font-weight:700;font-size:14px;" data-nav="aula" data-aula="' + proxima.id + '">' + (concluidas > 0 ? 'Continuar' : 'Começar') + ' →</button>' +
-        '</div>' +
-        '<button class="topics-toggle" data-toggle-topics="' + modulo.id + '">' +
-          'Ver as aulas deste módulo' +
-          '<svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        '</button>' +
-        '<div class="topics-inline" id="topics-inline-' + modulo.id + '"></div>' +
+      '<div class="trail-eyebrow">' + modulo.titulo + '</div>' +
+      '<h3>' + modulo.tema + '</h3>' +
+      '<p>' + modulo.descricao + '</p>' +
+      '<div class="trail-progress"><div style="width:' + pct + '%"></div></div>' +
+      '<div class="trail-footer">' +
+      '<span class="trail-meta">' + concluidas + ' de ' + total + ' aulas · ' + statusTexto + '</span>' +
+      '<button class="btn-mini" style="color:var(--' + modulo.accent + ');font-weight:700;font-size:14px;" data-nav="aula" data-aula="' + proxima.id + '">' + (concluidas > 0 ? 'Continuar' : 'Começar') + ' →</button>' +
+      '</div>' +
+      '<button class="topics-toggle" data-toggle-topics="' + modulo.id + '">' +
+      'Ver as aulas deste módulo' +
+      '<svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '</button>' +
+      '<div class="topics-inline" id="topics-inline-' + modulo.id + '"></div>' +
       '</div>';
     container.appendChild(node);
   });
 }
 
-function renderInlineAulas(moduloId){
+function renderInlineAulas(moduloId) {
   const container = document.getElementById('topics-inline-' + moduloId);
   if (!container) return;
   container.dataset.rendered = '1';
@@ -337,7 +337,7 @@ function renderInlineAulas(moduloId){
 }
 
 // ---- Progresso: painel geral + detalhe por módulo ----
-function renderProgresso(){
+function renderProgresso() {
   const geral = calcularProgressoGeral();
   document.getElementById('progresso-total-pct').textContent = geral.pct + '%';
   document.getElementById('progresso-total-label').textContent = geral.concluidas + ' de ' + geral.total + ' aulas concluídas';

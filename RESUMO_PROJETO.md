@@ -56,6 +56,10 @@
 
 8. **Vídeos no Google Drive (27/07):** as 14 aulas foram upadas pelo usuário numa pasta "Universidade SUAS" (subpastas Módulo 1 e Módulo 2, replicando a estrutura do curso), compartilhadas como "Qualquer pessoa com o link". Os 14 `driveFileId` em `config/cursos.js` foram trocados pelos IDs reais e o commit já está publicado — confirmado ao vivo, sem placeholders restantes.
 
+9. **Redesenho do hero da home (27/07):** adicionada a logo da A&3 Tecnologia (`assets/img/logo-ae3.png`) e o hero da home foi redesenhado; depois, a espiral decorativa e os divisores do eyebrow foram removidos do mesmo hero (dois commits separados, o segundo ajustando o primeiro).
+
+10. **README.md atualizado (28/07):** URL de clone corrigida para o repo definitivo (`universidadesiabes/universidadesiabes.github.io`), URL ao vivo adicionada, roadmap marcando vídeos/PDFs como concluídos e listando as ideias de conteúdo em aberto (item abaixo) como itens de roadmap.
+
 ## Em aberto / decisão pendente
 
 - Nenhum bloqueador grande restante para o curso funcionar. Itens de roadmap (não urgentes):
