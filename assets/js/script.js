@@ -271,6 +271,7 @@ function loadAula(id) {
   document.querySelector('.tab[data-tab="sobre"]').classList.add('is-active');
   document.querySelectorAll('.tabpanel').forEach(p => p.classList.remove('is-active'));
   document.querySelector('.tabpanel[data-panel="sobre"]').classList.add('is-active');
+  document.querySelector('.tab[data-tab="atividade"]').hidden = aula.quiz.length === 0;
 }
 
 // ---- Home: 1 card de preview por módulo ----
