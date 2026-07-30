@@ -19,8 +19,11 @@
   var W = 0, H = 0;
 
   function resize() {
-    W = canvas.clientWidth;
-    H = canvas.clientHeight;
+    var newW = canvas.clientWidth;
+    var newH = canvas.clientHeight;
+    if (!newW || !newH) return;
+    W = newW;
+    H = newH;
     canvas.width = W * dpr;
     canvas.height = H * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -104,6 +107,16 @@
 
   function loop() {
     if (!running) return;
+    try {
+      frame();
+    } catch (e) {
+      // uma exceção aqui pararia o requestAnimationFrame pra sempre;
+      // segue agendando o próximo frame mesmo se algo der errado.
+    }
+    raf = requestAnimationFrame(loop);
+  }
+
+  function frame() {
     ctx.clearRect(0, 0, W, H);
 
     for (var i = 0; i < nodes.length; i++) {
@@ -157,8 +170,6 @@
     }
 
     drawNodes();
-
-    raf = requestAnimationFrame(loop);
   }
 
   function start() {
@@ -172,6 +183,9 @@
   }
 
   window.addEventListener('resize', resize);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(resize);
+  }
 
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
