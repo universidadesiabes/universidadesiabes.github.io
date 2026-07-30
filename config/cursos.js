@@ -336,5 +336,104 @@ const modulos = [
         ]
       }
     ]
+  },
+  {
+    id: 3,
+    titulo: "Módulo 3",
+    accent: "accent-3",
+    tema: "Benefícios Eventuais na Política de Assistência Social",
+    descricao: "Nesta trilha você vai entender o que são os benefícios eventuais, as formas de oferta, os critérios de acesso, o papel do técnico do CRAS/CREAS e os princípios éticos que orientam a concessão.",
+    meta: "47min · 5 aulas",
+    aulas: [
+      {
+        id: 15,
+        titulo: "Benefícios eventuais: conceito e objetivo",
+        curta: "O que são os benefícios eventuais e por que existem na assistência social.",
+        desc: "Os benefícios eventuais são provisões da Política de Assistência Social voltadas a famílias e indivíduos em situação de vulnerabilidade temporária. Esta aula apresenta o conceito e estabelece o objetivo central do módulo: entender a natureza, a legislação e os critérios de concessão desses benefícios para garantir o direito com agilidade e respeito.",
+        driveFileId: "1DneVR9kYfqHSrHF53UpMPbYhjiZxWQZH",
+        baseLegal: [],
+        quiz: [
+          { pergunta: "Qual é o objetivo central definido para este módulo sobre benefícios eventuais?", opcoes: ["Compreender a natureza, a legislação e os critérios de concessão, garantindo agilidade e respeito", "Ensinar a preencher formulários do INSS", "Definir o valor exato de cada benefício em todos os municípios", "Substituir o CadÚnico por um novo sistema"], correta: 0 },
+          { pergunta: "A quais política os benefícios eventuais estão vinculados?", opcoes: ["Política de Assistência Social (SUAS)", "Política de Saúde (SUS)", "Política de Educação", "Política de Habitação"], correta: 0 }
+        ],
+        resumo: [
+          "Benefícios eventuais são provisões da Política de Assistência Social (SUAS) direcionadas a situações de vulnerabilidade temporária.",
+          "O objetivo do módulo é compreender a natureza, a legislação e os critérios de concessão desses benefícios.",
+          "A concessão deve equilibrar agilidade e respeito ao cidadão."
+        ]
+      },
+      {
+        id: 16,
+        titulo: "Formas de oferta e o que não é benefício eventual",
+        curta: "Pecúnia, bens e serviços — e os limites do que pode ser ofertado.",
+        desc: "Esta aula detalha as três formas de oferta dos benefícios eventuais — pecúnia, bens de consumo e serviços —, destacando a pecúnia como forma preferencial por ampliar a autonomia e o poder de escolha da família. Em seguida, define os limites da assistência social frente à política de saúde, esclarecendo o que não pode ser ofertado como benefício eventual.",
+        driveFileId: "1DeXxNyTzz3iSY2jpxfFaz1rn85FpkkYI",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 39/2010", nota: "Estabelece os limites da assistência social, excluindo itens de saúde (medicamentos, órteses, próteses, cadeiras de rodas, transporte de doentes, dietas especiais) do rol de benefícios eventuais — devem ser providos pela Política de Saúde." }
+        ],
+        quiz: [
+          { pergunta: "Qual forma de oferta é considerada preferencial, por garantir maior autonomia à família?", opcoes: ["Pecúnia", "Bens de consumo", "Serviços", "Cestas básicas"], correta: 0 },
+          { pergunta: "Segundo a Resolução CNAS nº 39/2010, qual item NÃO deve ser ofertado como benefício eventual?", opcoes: ["Cadeiras de rodas e muletas", "Auxílio funeral", "Cesta básica", "Enxoval para recém-nascido"], correta: 0 }
+        ],
+        resumo: [
+          "A pecúnia (transferência direta de recursos) é a forma preferencial de oferta, por ampliar a autonomia e o poder de escolha da família.",
+          "Bens de consumo (cestas básicas, enxovais, urnas funerárias) e serviços (como custeio de sepultamento) também são formas válidas de oferta, especialmente em situações de urgência.",
+          "Itens de saúde — medicamentos, órteses, próteses, cadeiras de rodas, transporte de doentes, dietas especiais — não são benefícios eventuais; devem ser providos pela Política de Saúde.",
+          "A Assistência Social não substitui outras políticas públicas: articula a rede para garantir o acesso integral ao direito."
+        ]
+      },
+      {
+        id: 17,
+        titulo: "Critérios de acesso, papel do técnico e desafios da gestão",
+        curta: "Quem tem direito, o papel do CRAS/CREAS e os desafios da gestão municipal.",
+        desc: "Esta aula aborda os critérios de concessão e acesso aos benefícios eventuais — público-alvo, parâmetro de renda familiar e avaliação técnica —, o papel do técnico de referência do CRAS/CREAS na escuta qualificada, no parecer técnico e no acompanhamento, e os principais desafios enfrentados pela gestão municipal para garantir orçamento, agilidade e transparência na concessão.",
+        driveFileId: "1alYhYLwcsSBNHnq36p0MRRWTFikFGUOy",
+        baseLegal: [
+          { norma: "Resolução CNAS nº 39/2010", nota: "Reforça que o acesso aos benefícios eventuais deve ser simples e ágil, dispensando o cadastramento prévio no CadÚnico em casos de concessão imediata (emergência, situação de rua, imigrantes)." },
+          { norma: "Resolução nº 213/2025", nota: "Citada na aula como prazo crítico (28 de outubro de 2026) para a adequação legal dos municípios em relação aos benefícios eventuais." }
+        ],
+        quiz: [
+          { pergunta: "Qual é o parâmetro geral de renda familiar per capita citado para concessão dos benefícios eventuais?", opcoes: ["Até 1/2 salário mínimo", "Até 1 salário mínimo", "Até 2 salários mínimos", "Não há parâmetro de renda"], correta: 0 },
+          { pergunta: "Qual das opções abaixo NÃO faz parte do papel do técnico do CRAS/CREAS na concessão de benefícios eventuais?", opcoes: ["Escuta qualificada da demanda", "Emissão de parecer técnico fundamentado", "Acompanhamento vinculado ao serviço socioassistencial", "Definição do orçamento municipal de assistência social"], correta: 3 }
+        ],
+        resumo: [
+          "O público-alvo dos benefícios eventuais são cidadãos e famílias que não conseguem arcar com contingências sociais por meios próprios.",
+          "O parâmetro geral de renda é de até 1/2 salário mínimo per capita, podendo ser flexibilizado pela lei municipal.",
+          "O técnico de referência atua na escuta qualificada, no parecer técnico que fundamenta a concessão e no acompanhamento que vincula o benefício ao serviço socioassistencial.",
+          "Os principais desafios da gestão municipal são garantir orçamento próprio no Fundo Municipal, agilidade na concessão e transparência na divulgação dos critérios."
+        ]
+      },
+      {
+        id: 18,
+        titulo: "Princípios éticos e fluxo de atendimento",
+        curta: "Dignidade, igualdade e não condicionalidade — e o passo a passo do atendimento.",
+        desc: "Esta aula apresenta os princípios éticos que devem orientar a concessão dos benefícios eventuais — dignidade, igualdade e não condicionalidade — e o fluxo de atendimento no SUAS, da identificação da demanda até o registro no prontuário.",
+        driveFileId: "1kLVr3fYFgWjlbbn7yb8ID9VADNAo-J4B",
+        baseLegal: [],
+        quiz: [
+          { pergunta: "Qual princípio ético estabelece que não se pode exigir participação em cursos ou atividades como \"troca\" pela concessão do benefício?", opcoes: ["Não condicionalidade", "Dignidade", "Igualdade", "Desburocratização"], correta: 0 },
+          { pergunta: "Qual é a primeira etapa do fluxo de atendimento no SUAS apresentado na aula?", opcoes: ["Identificação", "Decisão", "Registro", "Efetivação"], correta: 0 }
+        ],
+        resumo: [
+          "Dignidade: evitar exigências vexatórias ou julgamentos morais sobre a família.",
+          "Igualdade: aplicar os mesmos critérios técnicos e legais a todos os cidadãos em situação idêntica.",
+          "Não condicionalidade: não exigir cursos, atividades ou qualquer \"troca\" pela concessão do benefício.",
+          "O fluxo de atendimento segue 5 etapas: identificação, atendimento, decisão, efetivação e registro no prontuário SUAS."
+        ]
+      },
+      {
+        id: 19,
+        titulo: "Dúvidas",
+        curta: "Sessão de perguntas e respostas com os participantes.",
+        desc: "Encerramento da apresentação com a rodada de perguntas e respostas dos participantes sobre os benefícios eventuais.",
+        driveFileId: "1Lu5mkNHSbYVh2NCi6vH8ia0IzCOfQjD8",
+        pdf: "./pdf/modulo-3/material-completo.pdf",
+        baseLegal: [],
+        quiz: [],
+        resumo: [
+          "Sessão de perguntas e respostas, sem conteúdo de slide."
+        ]
+      }
+    ]
   }
 ];

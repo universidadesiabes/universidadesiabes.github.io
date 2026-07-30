@@ -223,7 +223,13 @@ function loadAula(id) {
   document.getElementById('aula-crumb').textContent = modulo.titulo + ' · ' + aula.titulo;
   document.getElementById('aula-meta').innerHTML = '<span>' + modulo.titulo + '</span><span>Aula ' + posicao + ' de ' + modulo.aulas.length + '</span>';
   document.getElementById('aula-descricao').textContent = aula.desc;
-  document.getElementById('btn-download').setAttribute('href', aula.pdf);
+  const btnDownload = document.getElementById('btn-download');
+  if (aula.pdf) {
+    btnDownload.setAttribute('href', aula.pdf);
+    btnDownload.hidden = false;
+  } else {
+    btnDownload.hidden = true;
+  }
 
   loadPlayerVideo(aula.driveFileId);
   atualizarBotaoConcluida(aula.id);
@@ -238,11 +244,15 @@ function loadAula(id) {
 
   const baseLegalEl = document.getElementById('aula-base-legal');
   baseLegalEl.innerHTML = '';
-  (aula.baseLegal || []).forEach(ref => {
-    const li = document.createElement('li');
-    li.innerHTML = '<b>' + ref.norma + '</b> — ' + ref.nota;
-    baseLegalEl.appendChild(li);
-  });
+  const temBaseLegal = aula.baseLegal && aula.baseLegal.length > 0;
+  baseLegalEl.closest('.base-legal').hidden = !temBaseLegal;
+  if (temBaseLegal) {
+    aula.baseLegal.forEach(ref => {
+      const li = document.createElement('li');
+      li.innerHTML = '<b>' + ref.norma + '</b> — ' + ref.nota;
+      baseLegalEl.appendChild(li);
+    });
+  }
 
   renderSidePanel(modulo, aula);
   renderQuiz(aula);

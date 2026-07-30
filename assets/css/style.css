@@ -16,6 +16,10 @@
     --accent-2:#8A5A12;
     --accent-2-soft:#E0C79A;
 
+    /* acento categórico do módulo 3 */
+    --accent-3:#5D3FA8;
+    --accent-3-soft:#C7B8E8;
+
     /* superfícies e texto */
     --navy:#101826;           /* tinta escura A&3: nav, hero, rodapé */
     --navy-mid:#1B2A3F;
@@ -188,6 +192,7 @@
   .course-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
   .course-card[data-accent="gold"]{--accent:var(--gold);--accent-soft:var(--gold-soft);}
   .course-card[data-accent="olive"]{--accent:var(--olive);--accent-soft:var(--olive-soft);}
+  .course-card[data-accent="accent-3"]{--accent:var(--accent-3);--accent-soft:var(--accent-3-soft);}
   .course-tag{
     font-family:var(--font-display);font-size:11px;letter-spacing:0.08em;
     text-transform:uppercase;color:var(--accent);font-weight:600;position:relative;z-index:2;
@@ -275,6 +280,7 @@
   .trail-card.is-ghost h3{color:var(--ink-soft);}
   .trail-node[data-accent="gold"]{--accent:var(--gold);--accent-ring:rgba(10,87,194,0.14);}
   .trail-node[data-accent="olive"]{--accent:var(--olive);--accent-ring:rgba(138,90,18,0.14);}
+  .trail-node[data-accent="accent-3"]{--accent:var(--accent-3);--accent-ring:rgba(93,63,168,0.14);}
 
   .topics-toggle{
     display:inline-flex;align-items:center;gap:7px;margin-top:16px;
@@ -376,6 +382,7 @@
     transition:color .16s ease;
   }
   .resumo-pdf-link:hover{color:var(--gold);}
+  .resumo-pdf-link[hidden]{display:none;}
 
   /* ---------- QUIZ (aba Atividade) ---------- */
   .quiz-intro{font-size:14px;color:var(--ink-soft);margin:0 0 20px;}
