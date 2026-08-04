@@ -168,8 +168,136 @@ function refazerQuiz() {
   if (found) renderQuiz(found.aula);
 }
 
+// ---- Simulado Final (mistura perguntas reais dos módulos publicados) ----
+// Nenhuma pergunta é inventada aqui: sorteia entre as perguntas que já
+// existem em cada aula (config/cursos.js), na proporção do tamanho do banco
+// de cada módulo — se um Módulo 4 for publicado depois, entra na conta
+// automaticamente, sem precisar ajustar números à mão.
+const SIMULADO_TOTAL = 20;
+const SIMULADO_KEY = 'suas_simulado_ultimo';
+let simuladoAtual = [];
+
+function embaralhar(lista) {
+  const copia = lista.slice();
+  for (let i = copia.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copia[i], copia[j]] = [copia[j], copia[i]];
+  }
+  return copia;
+}
+
+function bancoDePerguntasPorModulo() {
+  return modulos
+    .map(modulo => {
+      const perguntas = [];
+      modulo.aulas.forEach(aula => {
+        aula.quiz.forEach(q => perguntas.push({
+          moduloTitulo: modulo.titulo, aulaTitulo: aula.titulo,
+          pergunta: q.pergunta, opcoes: q.opcoes, correta: q.correta
+        }));
+      });
+      return perguntas;
+    })
+    .filter(perguntas => perguntas.length > 0);
+}
+
+// Distribui SIMULADO_TOTAL perguntas proporcionalmente ao tamanho do banco de
+// cada módulo (maiores restos, pra fechar o total exato sem viés de arredondamento).
+function sortearSimulado() {
+  const bancos = bancoDePerguntasPorModulo();
+  const totalDisponivel = bancos.reduce((s, b) => s + b.length, 0);
+  const alvo = Math.min(SIMULADO_TOTAL, totalDisponivel);
+
+  const cotasExatas = bancos.map(b => (b.length / totalDisponivel) * alvo);
+  const cotas = cotasExatas.map(Math.floor);
+  let faltam = alvo - cotas.reduce((s, c) => s + c, 0);
+  const restosOrdenados = cotasExatas
+    .map((c, i) => ({ i, resto: c - Math.floor(c) }))
+    .sort((a, b) => b.resto - a.resto);
+  for (let k = 0; k < faltam; k++) cotas[restosOrdenados[k].i]++;
+
+  const selecionadas = bancos.flatMap((perguntas, i) => embaralhar(perguntas).slice(0, cotas[i]));
+  return embaralhar(selecionadas);
+}
+
+function getSimuladoUltimo() {
+  try {
+    return JSON.parse(progressoStorage.getItem(SIMULADO_KEY));
+  } catch (e) {
+    return null;
+  }
+}
+
+function renderSimulado() {
+  simuladoAtual = sortearSimulado();
+  const container = document.getElementById('simulado-container');
+  container.innerHTML = '';
+  simuladoAtual.forEach((q, qi) => {
+    const qDiv = document.createElement('div');
+    qDiv.className = 'quiz-question';
+    const opcoesHtml = q.opcoes.map((op, oi) =>
+      '<label class="quiz-opcao"><input type="radio" name="simulado-' + qi + '" value="' + oi + '"><span>' + op + '</span></label>'
+    ).join('');
+    qDiv.innerHTML =
+      '<span class="quiz-origem">' + q.moduloTitulo + ' · ' + q.aulaTitulo + '</span>' +
+      '<p class="quiz-pergunta">' + (qi + 1) + '. ' + q.pergunta + '</p>' +
+      '<div class="quiz-opcoes">' + opcoesHtml + '</div>';
+    container.appendChild(qDiv);
+  });
+
+  document.getElementById('btn-corrigir-simulado').hidden = false;
+  document.getElementById('btn-refazer-simulado').hidden = true;
+
+  const resultadoEl = document.getElementById('simulado-resultado');
+  resultadoEl.hidden = true;
+  resultadoEl.classList.remove('is-aviso');
+  resultadoEl.textContent = '';
+
+  const ultimo = getSimuladoUltimo();
+  document.getElementById('simulado-ultima-tentativa').textContent =
+    ultimo ? 'Última tentativa: ' + ultimo.acertos + ' de ' + ultimo.total + ' corretas.' : '';
+}
+
+function corrigirSimulado() {
+  const perguntas = document.querySelectorAll('#simulado-container .quiz-question');
+  const resultadoEl = document.getElementById('simulado-resultado');
+
+  const todasRespondidas = Array.from(perguntas).every(qDiv => qDiv.querySelector('input[type="radio"]:checked'));
+  if (!todasRespondidas) {
+    resultadoEl.hidden = false;
+    resultadoEl.classList.add('is-aviso');
+    resultadoEl.textContent = 'Responda todas as perguntas antes de corrigir.';
+    return;
+  }
+  resultadoEl.classList.remove('is-aviso');
+
+  let acertos = 0;
+  perguntas.forEach((qDiv, qi) => {
+    const q = simuladoAtual[qi];
+    const checked = qDiv.querySelector('input[type="radio"]:checked');
+    const escolhida = Number(checked.value);
+    if (escolhida === q.correta) acertos++;
+    qDiv.querySelectorAll('.quiz-opcao').forEach((opEl, oi) => {
+      if (oi === q.correta) opEl.classList.add('is-correct');
+      else if (oi === escolhida) opEl.classList.add('is-wrong');
+      opEl.querySelector('input').disabled = true;
+    });
+  });
+
+  const total = perguntas.length;
+  resultadoEl.hidden = false;
+  resultadoEl.textContent = 'Você acertou ' + acertos + ' de ' + total + ' perguntas.';
+  document.getElementById('btn-corrigir-simulado').hidden = true;
+  document.getElementById('btn-refazer-simulado').hidden = false;
+
+  progressoStorage.setItem(SIMULADO_KEY, JSON.stringify({ acertos, total }));
+}
+
 function driveEmbedUrl(fileId) {
-  return 'https://drive.google.com/file/d/' + fileId + '/preview';
+  // authuser=0 evita que o Drive escolha uma conta Google secundária logada
+  // no navegador do visitante (que pode não ter acesso ao arquivo e retornar
+  // 401), forçando a conta padrão / acesso público do link compartilhado.
+  return 'https://drive.google.com/file/d/' + fileId + '/preview?authuser=0';
 }
 
 // Troca o vídeo carregado no player ao trocar de aula.
@@ -187,6 +315,7 @@ function showView(name) {
   if (name === 'home') renderHome();
   if (name === 'trilha') renderTrilha();
   if (name === 'progresso') renderProgresso();
+  if (name === 'simulado') renderSimulado();
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -417,6 +546,18 @@ document.addEventListener('click', (e) => {
   const refazerBtn = e.target.closest('[data-quiz-refazer]');
   if (refazerBtn) {
     refazerQuiz();
+    return;
+  }
+
+  const corrigirSimuladoBtn = e.target.closest('[data-simulado-corrigir]');
+  if (corrigirSimuladoBtn) {
+    corrigirSimulado();
+    return;
+  }
+
+  const refazerSimuladoBtn = e.target.closest('[data-simulado-refazer]');
+  if (refazerSimuladoBtn) {
+    renderSimulado();
     return;
   }
 

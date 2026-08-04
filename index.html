@@ -358,6 +358,19 @@
 
         <div id="trail-modules"></div>
 
+        <div class="trail-node is-closing">
+          <div class="trail-marker"><div class="trail-dot is-final"></div></div>
+          <div class="trail-card">
+            <div class="trail-eyebrow">Fechamento</div>
+            <h3>Simulado Final</h3>
+            <p>20 perguntas sorteadas dos módulos já publicados, misturadas a cada tentativa — sem nota mínima, é só para você medir o que já absorveu antes de seguir para o próximo módulo.</p>
+            <div class="trail-footer">
+              <span class="trail-meta">Pode refazer quantas vezes quiser</span>
+              <button class="btn-mini" style="color:var(--success);font-weight:700;font-size:14px;" data-nav="simulado">Fazer o simulado →</button>
+            </div>
+          </div>
+        </div>
+
         <div class="trail-node">
           <div class="trail-marker"><div class="trail-dot is-ghost"></div></div>
           <div class="trail-card is-ghost">
@@ -469,6 +482,29 @@
       <div id="progresso-modulos" class="progresso-modulos"></div>
 
       <button class="progresso-reset" id="btn-reset-progresso" data-reset-progresso>Zerar progresso</button>
+    </div>
+  </section>
+
+  <!-- ============ SIMULADO FINAL ============ -->
+  <section class="view" id="view-simulado">
+    <div class="progresso-wrap">
+      <a href="#" class="back-btn" data-nav="trilha">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Voltar à trilha
+      </a>
+
+      <div class="trilha-head">
+        <h2>Simulado Final</h2>
+        <p>20 perguntas sorteadas dos módulos publicados, misturadas a cada tentativa. Não tem nota mínima — é para você revisar o que já aprendeu.</p>
+      </div>
+
+      <p class="quiz-intro" id="simulado-ultima-tentativa"></p>
+      <div id="simulado-container"></div>
+      <div class="quiz-actions">
+        <button class="quiz-corrigir-btn" id="btn-corrigir-simulado" data-simulado-corrigir>Corrigir</button>
+        <button class="quiz-refazer-btn" id="btn-refazer-simulado" data-simulado-refazer hidden>Sortear outro simulado</button>
+      </div>
+      <div class="quiz-resultado" id="simulado-resultado" hidden></div>
     </div>
   </section>
 

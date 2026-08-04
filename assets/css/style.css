@@ -263,9 +263,12 @@
   .trail-svg{position:absolute;left:0;top:0;height:100%;width:52px;}
   .trail-node{position:relative;padding-bottom:60px;}
   .trail-node:last-child{padding-bottom:0;}
+  /* dá um respiro extra antes do nó de fechamento (Simulado Final), pra não colar visualmente no último módulo */
+  .trail-node.is-closing{margin-top:32px;}
   .trail-marker{position:absolute;left:-52px;top:0;width:52px;height:52px;display:flex;align-items:center;justify-content:center;}
   .trail-dot{width:18px;height:18px;border-radius:50%;background:var(--accent,var(--gold));box-shadow:0 0 0 6px var(--accent-ring,rgba(10,87,194,0.12));position:relative;z-index:2;}
   .trail-dot.is-ghost{background:#fff;border:2px dashed var(--line);box-shadow:none;}
+  .trail-dot.is-final{background:var(--success);box-shadow:0 0 0 6px rgba(23,122,82,0.14);}
   .trail-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;transition:box-shadow .2s ease, transform .2s ease;position:relative;overflow:hidden;}
   .trail-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);}
   .trail-eyebrow{font-family:var(--font-display);font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent,var(--navy-soft));font-weight:600;margin-bottom:8px;}
@@ -389,6 +392,8 @@
   .quiz-question{margin-bottom:24px;}
   .quiz-question:last-child{margin-bottom:0;}
   .quiz-pergunta{font-size:14.5px;font-weight:700;color:var(--navy);margin:0 0 10px;line-height:1.5;}
+  /* usada só no Simulado Final, pra identificar de qual módulo/aula cada pergunta vem */
+  .quiz-origem{display:block;font-size:11px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
   .quiz-opcoes{display:flex;flex-direction:column;gap:8px;}
   .quiz-opcao{
     display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:10px;
